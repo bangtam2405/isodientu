@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSC-IS00 - Phần mềm ISO điện tử hàng đầu Việt Nam</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+</head>
+<body class="font-sans text-text-primary overflow-x-hidden">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-500" id="header">
+        <nav class="container mx-auto px-6 py-8">
+            <div class="flex items-center justify-between min-h-[5rem]">
+                <!-- Logo -->
+                <div class="flex items-center text-white" data-aos="fade-right">
+                    <div class="relative group">
+                        <div class="w-32 h-18 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center transform hover:scale-105 transition-all duration-300 overflow-hidden border border-white/20 shadow-lg">
+                            <img src="image/logocusc.jpg" alt="CUSC Logo" class="w-28 h-16 object-contain rounded-xl">
+                        </div>
+                        <!-- Glow effect -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-accent/30 to-amber-600/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm -z-10"></div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-12 text-white" data-aos="fade-down">
+                    <a href="#home" class="nav-link hover:text-accent transition-colors duration-300 relative py-4 px-5 rounded-xl hover:bg-white/10 text-xl font-medium">
+                        Trang chủ
+                        <span class="nav-underline"></span>
+                    </a>
+                    <a href="#features" class="nav-link hover:text-accent transition-colors duration-300 relative py-4 px-5 rounded-xl hover:bg-white/10 text-xl font-medium">
+                        Tính năng
+                        <span class="nav-underline"></span>
+                    </a>
+                    <a href="#benefits" class="nav-link hover:text-accent transition-colors duration-300 relative py-4 px-5 rounded-xl hover:bg-white/10 text-xl font-medium">
+                        Lợi ích
+                        <span class="nav-underline"></span>
+                    </a>
+                    <a href="#proof" class="nav-link hover:text-accent transition-colors duration-300 relative py-4 px-5 rounded-xl hover:bg-white/10 text-xl font-medium">
+                        Thành tích
+                        <span class="nav-underline"></span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-white text-4xl p-4 rounded-xl hover:bg-white/10 transition-colors duration-300" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="lg:hidden glass-effect-dark text-white p-10 hidden border-t border-white/10" id="mobileMenu">
+            <div class="flex flex-col space-y-8">
+                <a href="#home" class="hover:text-accent transition-colors py-4 px-6 rounded-xl hover:bg-white/10 text-xl">
+                    <i class="fas fa-home mr-5"></i>Trang chủ
+                </a>
+                <a href="#features" class="hover:text-accent transition-colors py-4 px-6 rounded-xl hover:bg-white/10 text-xl">
+                    <i class="fas fa-star mr-5"></i>Tính năng
+                </a>
+                <a href="#benefits" class="hover:text-accent transition-colors py-4 px-6 rounded-xl hover:bg-white/10 text-xl">
+                    <i class="fas fa-trophy mr-5"></i>Lợi ích
+                </a>
+                <a href="#proof" class="hover:text-accent transition-colors py-4 px-6 rounded-xl hover:bg-white/10 text-xl">
+                    <i class="fas fa-award mr-5"></i>Thành tích
+                </a>
+                <a href="#contact" class="bg-gradient-to-r from-accent to-amber-600 text-white px-10 py-5 rounded-xl text-center font-bold mt-8 hover:shadow-lg transition-all duration-300 text-xl">
+                    <i class="fas fa-phone mr-3"></i>Liên hệ
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center relative overflow-hidden" id="home">
+        <!-- Particles Background -->
+        <div id="particles-js" class="absolute inset-0"></div>
+        
+        <!-- Floating Shapes -->
+        <div class="floating-shapes">
+            <div class="shape w-20 h-20 bg-white rounded-full"></div>
+            <div class="shape w-16 h-16 bg-accent rounded-lg transform rotate-45"></div>
+            <div class="shape w-12 h-12 bg-white rounded-full"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="text-white space-y-8" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="space-y-4">
+                        <h1 class="text-5xl lg:text-7xl font-bold leading-tight text-shadow">
+                            Số hóa 
+                            <span class="text-accent typing-effect inline-block">ISO 9001:2015</span>
+                        </h1>
+                        <h2 class="text-2xl lg:text-3xl font-light opacity-90">
+                            Nâng tầm chính quyền điện tử
+                        </h2>
+                    </div>
+                    
+                    <p class="text-xl opacity-90 leading-relaxed">
+                        857+ cơ quan tin tưởng - Giải pháp ISO điện tử hàng đầu Việt Nam. 
+                        Từ 6 tháng xuống 2 tuần, cách mạng hóa quy trình ISO của bạn.
+                    </p>
+                    
+                    <!-- Hero Stats -->
+                    <div class="grid grid-cols-3 gap-8 py-8">
+                        <div class="text-center transform hover:scale-110 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="text-4xl font-bold text-accent mb-2 counter" data-target="857">0</div>
+                            <div class="text-sm opacity-80">Cơ quan triển khai</div>
+                        </div>
+                        <div class="text-center transform hover:scale-110 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="text-4xl font-bold text-accent mb-2 counter" data-target="7">0</div>
+                            <div class="text-sm opacity-80">Tỉnh/Thành phố</div>
+                        </div>
+                        <div class="text-center transform hover:scale-110 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="text-4xl font-bold text-accent mb-2">70%</div>
+                            <div class="text-sm opacity-80">Tiết kiệm thời gian</div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="800">
+                        <a href="#contact" class="magnetic-button bg-gradient-to-r from-accent to-amber-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-accent/40 glow-effect transform hover:scale-105 transition-all duration-300">
+                            <i class="fas fa-rocket mr-2"></i>
+                            Liên hệ ngay
+                        </a>
+                        <a href="#features" class="magnetic-button glass-effect text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary transition-all duration-300">
+                            <i class="fas fa-play mr-2"></i>
+                            Tìm hiểu thêm
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="relative z-10">
+                        <!-- Main Mockup -->
+                        <div class="morphism p-8 rounded-3xl transform hover:rotate-2 transition-transform duration-500 hover-lift">
+                            <div class="bg-gradient-to-br from-white to-gray-100 rounded-2xl p-4 shadow-2xl overflow-hidden">
+                                <div class="flex items-center justify-center h-64">
+                                    <img src="image/ISOdientu.png" alt="CUSC-IS00 Dashboard" class="w-full h-full object-cover rounded-xl shadow-lg">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating Elements -->
+                        <div class="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-accent to-amber-600 rounded-2xl flex items-center justify-center animate-bounce-slow">
+                            <i class="fas fa-check text-white text-xl"></i>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center animate-float">
+                            <i class="fas fa-star text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Background Decorations -->
+                    <div class="absolute inset-0 -z-10">
+                        <div class="absolute top-10 right-10 w-32 h-32 bg-accent/20 rounded-full animate-spin-slow"></div>
+                        <div class="absolute bottom-10 left-10 w-24 h-24 bg-white/20 rounded-lg transform rotate-45 animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-gradient-to-br from-light-bg to-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, #1e40af 2px, transparent 2px), radial-gradient(circle at 75% 75%, #f59e0b 2px, transparent 2px); background-size: 50px 50px;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-5xl font-bold gradient-text mb-6">
+                    Thách thức trong quản lý ISO truyền thống
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                    Những khó khăn mà các cơ quan hành chính đang phải đối mặt khi triển khai và duy trì hệ thống chất lượng ISO
+                </p>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6 rounded-full"></div>
+            </div>
+            
+            <!-- Problem Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center mx-auto transform -rotate-6 hover:rotate-0 transition-transform duration-300">
+                            <i class="fas fa-clock text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full animate-ping"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-text-primary mb-4 text-center">Tốn thời gian</h3>
+                    <p class="text-text-secondary text-center leading-relaxed">
+                        Quy trình thủ công mất 6+ tháng để triển khai, kiểm soát tài liệu phức tạp, theo dõi tiến độ khó khăn
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-accent to-amber-600 rounded-2xl flex items-center justify-center mx-auto transform rotate-6 hover:rotate-0 transition-transform duration-300">
+                            <i class="fas fa-dollar-sign text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full animate-ping"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-text-primary mb-4 text-center">Chi phí cao</h3>
+                    <p class="text-text-secondary text-center leading-relaxed">
+                        In ấn, lưu trữ giấy tờ, nhân lực quản lý tài liệu, chi phí duy trì hệ thống hàng năm tốn kém
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                            <i class="fas fa-exclamation-triangle text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full animate-ping"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-text-primary mb-4 text-center">Rủi ro mất mát</h3>
+                    <p class="text-text-secondary text-center leading-relaxed">
+                        Tài liệu giấy dễ thất lạc, hư hỏng, thông tin không đồng bộ giữa các bộ phận
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Solution Content -->
+                <div data-aos="fade-right">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-primary/10 to-accent/10 px-4 py-2 rounded-full">
+                            <i class="fas fa-lightbulb text-accent"></i>
+                            <span class="text-primary font-semibold">Giải pháp thông minh</span>
+                        </div>
+                        
+                        <h2 class="text-4xl lg:text-5xl font-bold text-text-primary">
+                            CUSC-IS00 - 
+                            <span class="gradient-text">Giải pháp toàn diện</span>
+                        </h2>
+                        
+                        <p class="text-xl text-text-secondary leading-relaxed">
+                            Hệ thống quản lý chất lượng ISO điện tử được thiết kế riêng cho cơ quan hành chính nhà nước
+                        </p>
+                    </div>
+                    
+                    <!-- Features List -->
+                    <div class="space-y-4 mt-8">
+                        <div class="flex items-center space-x-4 p-4 rounded-xl hover:bg-blue-50 transition-colors duration-300" data-aos="fade-up" data-aos-delay="100">
+                            <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <span class="text-text-primary font-medium">Số hóa hoàn toàn quy trình ISO 9001:2015</span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4 p-4 rounded-xl hover:bg-blue-50 transition-colors duration-300" data-aos="fade-up" data-aos-delay="200">
+                            <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <span class="text-text-primary font-medium">Tích hợp liền mạch với hệ thống chính quyền điện tử</span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4 p-4 rounded-xl hover:bg-blue-50 transition-colors duration-300" data-aos="fade-up" data-aos-delay="300">
+                            <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <span class="text-text-primary font-medium">Giao diện thân thiện, dễ sử dụng</span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4 p-4 rounded-xl hover:bg-blue-50 transition-colors duration-300" data-aos="fade-up" data-aos-delay="400">
+                            <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <span class="text-text-primary font-medium">Kiến trúc Microservice hiện đại</span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4 p-4 rounded-xl hover:bg-blue-50 transition-colors duration-300" data-aos="fade-up" data-aos-delay="500">
+                            <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <span class="text-text-primary font-medium">Bảo mật cao, tuân thủ quy định của Nhà nước</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Solution Visual -->
+                <div class="relative" data-aos="fade-left">
+                    <!-- Main Dashboard Mockup -->
+                    <div class="relative z-10">
+                        <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-6 shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                            <!-- Browser Header -->
+                            <div class="flex items-center space-x-2 mb-4">
+                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                <div class="flex-1 bg-gray-700 rounded-full px-4 py-1 ml-4">
+                                    <span class="text-gray-400 text-sm">cusc-is00.dashboard</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Dashboard Content -->
+                            <div class="bg-white rounded-2xl p-6 space-y-4">
+                                <!-- Header -->
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-xl font-bold text-text-primary">Dashboard ISO 9001:2015</h3>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                        <span class="text-sm text-green-600 font-medium">Hoạt động</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Stats Cards -->
+                                <div class="grid grid-cols-3 gap-4">
+                                    <div class="bg-gradient-to-r from-primary to-secondary rounded-xl p-4 text-white text-center">
+                                        <div class="text-2xl font-bold">95%</div>
+                                        <div class="text-xs opacity-90">Hoàn thành</div>
+                                    </div>
+                                    <div class="bg-gradient-to-r from-accent to-amber-600 rounded-xl p-4 text-white text-center">
+                                        <div class="text-2xl font-bold">24</div>
+                                        <div class="text-xs opacity-90">Quy trình</div>
+                                    </div>
+                                    <div class="bg-gradient-to-r from-slate-500 to-slate-600 rounded-xl p-4 text-white text-center">
+                                        <div class="text-2xl font-bold">156</div>
+                                        <div class="text-xs opacity-90">Tài liệu</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Progress Bars -->
+                                <div class="space-y-3">
+                                    <div>
+                                        <div class="flex justify-between text-sm mb-1">
+                                            <span class="text-text-secondary">Đánh giá nội bộ</span>
+                                            <span class="text-text-primary font-medium">85%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2">
+                                            <div class="bg-gradient-to-r from-primary to-secondary h-2 rounded-full animate-pulse" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-sm mb-1">
+                                            <span class="text-text-secondary">Kiểm soát tài liệu</span>
+                                            <span class="text-text-primary font-medium">92%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2">
+                                            <div class="bg-gradient-to-r from-accent to-amber-600 h-2 rounded-full animate-pulse" style="width: 92%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-8 -right-8 w-20 h-20 bg-gradient-to-r from-accent to-amber-600 rounded-full flex items-center justify-center animate-bounce-slow shadow-lg">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    
+                    <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center animate-float shadow-lg">
+                        <i class="fas fa-cog text-white text-xl"></i>
+                    </div>
+                    
+                    <!-- Background Decorations -->
+                    <div class="absolute inset-0 -z-10">
+                        <div class="absolute top-1/4 right-1/4 w-40 h-40 bg-primary/10 rounded-full animate-pulse"></div>
+                        <div class="absolute bottom-1/4 left-1/4 w-32 h-32 bg-accent/10 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gradient-to-br from-light-bg to-blue-50 relative overflow-hidden" id="features">
+        <!-- Animated Background -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-0 w-full h-full opacity-30">
+                <div class="absolute animate-float" style="top: 10%; left: 10%;">
+                    <div class="w-4 h-4 bg-primary rounded-full"></div>
+                </div>
+                <div class="absolute animate-float" style="top: 20%; right: 20%; animation-delay: 2s;">
+                    <div class="w-6 h-6 bg-accent rounded-full"></div>
+                </div>
+                <div class="absolute animate-float" style="bottom: 30%; left: 30%; animation-delay: 4s;">
+                    <div class="w-5 h-5 bg-secondary rounded-full"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full mb-6">
+                    <i class="fas fa-star text-accent"></i>
+                    <span class="text-primary font-semibold">Tính năng nổi bật</span>
+                </div>
+                
+                <h2 class="text-4xl lg:text-6xl font-bold gradient-text mb-6">
+                    Sức mạnh của công nghệ
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                    Các tính năng mạnh mẽ giúp tối ưu hóa quy trình quản lý chất lượng của bạn
+                </p>
+            </div>
+            
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="group tilt-card bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/50" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-digital-tachograph text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary mb-4 group-hover:text-primary transition-colors duration-300">
+                        Số hóa HTQLCL ISO 9001:2015
+                    </h3>
+                    <p class="text-text-secondary leading-relaxed mb-4">
+                        Triển khai hoàn thiện hệ thống chính quyền điện tử tại cơ quan, đơn vị. Thay thế hoàn toàn quy trình giấy tờ truyền thống.
+                    </p>
+                    <div class="flex items-center text-primary font-medium group-hover:translate-x-2 transition-transform duration-300">
+                        <span class="mr-2">Tìm hiểu thêm</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="group tilt-card bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/50" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-accent to-amber-600 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-info-circle text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary mb-4 group-hover:text-accent transition-colors duration-300">
+                        Trang thông tin ISO
+                    </h3>
+                    <p class="text-text-secondary leading-relaxed mb-4">
+                        Cung cấp tài liệu nhận thức, hướng dẫn về ISO và thực tập thử thao tác hệ thống một cách trực quan.
+                    </p>
+                    <div class="flex items-center text-accent font-medium group-hover:translate-x-2 transition-transform duration-300">
+                        <span class="mr-2">Tìm hiểu thêm</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="group tilt-card bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/50" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-folder-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary mb-4 group-hover:text-slate-600 transition-colors duration-300">
+                        Xây dựng hồ sơ thông minh
+                    </h3>
+                    <p class="text-text-secondary leading-relaxed mb-4">
+                        Hỗ trợ HTQLCL năm mới bằng cách tái sử dụng hồ sơ năm trước, tiết kiệm thời gian và công sức.
+                    </p>
+                    <div class="flex items-center text-slate-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
+                        <span class="mr-2">Tìm hiểu thêm</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="group tilt-card bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/50" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary mb-4 group-hover:text-primary transition-colors duration-300">
+                        Kiểm soát tài liệu
+                    </h3>
+                                        <p class="text-text-secondary leading-relaxed mb-4">
+                        Trích xuất các hồ sơ phục vụ cho việc đánh giá nội bộ, kiểm tra giám sát, lưu trữ một cách chính xác.
+                    </p>
+                    <div class="flex items-center text-primary font-medium group-hover:translate-x-2 transition-transform duration-300">
+                        <span class="mr-2">Tìm hiểu thêm</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="group tilt-card bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/50" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-accent to-amber-600 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-project-diagram text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary mb-4 group-hover:text-accent transition-colors duration-300">
+                        Quy trình động
+                    </h3>
+                    <p class="text-text-secondary leading-relaxed mb-4">
+                        Có thể kéo thả cấu hình trực quan, tùy chỉnh quy trình theo đặc thù của từng cơ quan, đơn vị.
+                    </p>
+                    <div class="flex items-center text-accent font-medium group-hover:translate-x-2 transition-transform duration-300">
+                        <span class="mr-2">Tìm hiểu thêm</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="group tilt-card bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/50" data-aos="fade-up" data-aos-delay="600">
+                    <div class="relative mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-cubes text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary mb-4 group-hover:text-slate-600 transition-colors duration-300">
+                        Kiến trúc Microservice
+                    </h3>
+                    <p class="text-text-secondary leading-relaxed mb-4">
+                        Sử dụng công nghệ hiện đại, tích hợp dễ dàng với các hệ thống khác, đảm bảo tính ổn định cao.
+                    </p>
+                    <div class="flex items-center text-slate-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
+                        <span class="mr-2">Tìm hiểu thêm</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white relative overflow-hidden" id="benefits">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-primary/10 to-accent/10 px-6 py-3 rounded-full mb-6">
+                    <i class="fas fa-trophy text-accent"></i>
+                    <span class="text-primary font-semibold">Lợi ích cốt lõi</span>
+                </div>
+                
+                <h2 class="text-4xl lg:text-6xl font-bold gradient-text mb-6">
+                    Giá trị thiết thực
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                    Những giá trị thiết thực mà CUSC-IS00 mang lại cho tổ chức của bạn
+                </p>
+            </div>
+            
+            <!-- Benefits Stats -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="text-center group" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="relative mb-6">
+                        <div class="w-32 h-32 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <span class="text-4xl font-bold text-white counter" data-target="70">0</span>
+                            <span class="text-2xl text-white">%</span>
+                        </div>
+                        <div class="absolute inset-0 bg-primary/20 rounded-full animate-ping"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary mb-2">Tiết kiệm thời gian</h3>
+                    <p class="text-text-secondary">So với phương pháp truyền thống</p>
+                </div>
+                
+                <div class="text-center group" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="relative mb-6">
+                        <div class="w-32 h-32 bg-gradient-to-r from-accent to-amber-600 rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <span class="text-3xl font-bold text-white">2</span>
+                            <span class="text-lg text-white ml-1">tuần</span>
+                        </div>
+                        <div class="absolute inset-0 bg-accent/20 rounded-full animate-ping"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary mb-2">Thời gian triển khai</h3>
+                    <p class="text-text-secondary">Thay vì 6 tháng</p>
+                </div>
+                
+                <div class="text-center group" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="relative mb-6">
+                        <div class="w-32 h-32 bg-gradient-to-r from-slate-500 to-slate-600 rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <span class="text-3xl font-bold text-white counter" data-target="100">0</span>
+                            <span class="text-2xl text-white">%</span>
+                        </div>
+                        <div class="absolute inset-0 bg-slate-500/20 rounded-full animate-ping"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary mb-2">Tuân thủ quy định</h3>
+                    <p class="text-text-secondary">Thông tư 40/2020/TT-BTTTT</p>
+                </div>
+                
+                <div class="text-center group" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="relative mb-6">
+                        <div class="w-32 h-32 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <span class="text-3xl font-bold text-white">24/7</span>
+                        </div>
+                        <div class="absolute inset-0 bg-primary/20 rounded-full animate-ping"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary mb-2">Theo dõi dashboard</h3>
+                    <p class="text-text-secondary">Trực tuyến liên tục</p>
+                </div>
+            </div>
+            
+            <!-- Detailed Benefits -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Leadership Benefits -->
+                <div data-aos="fade-right">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center">
+                                <i class="fas fa-user-tie text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-text-primary">Lãnh đạo có thể:</h3>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 transition-all duration-300">
+                                <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-chart-line text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Dashboard trực quan</h4>
+                                    <p class="text-text-secondary text-sm">Theo dõi mục tiêu chất lượng hằng năm qua dashboard trực quan</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 hover:from-amber-100 hover:to-amber-200 transition-all duration-300">
+                                <div class="w-8 h-8 bg-gradient-to-r from-accent to-amber-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-file-alt text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Báo cáo tự động</h4>
+                                    <p class="text-text-secondary text-sm">Nhận báo cáo tự động, chính xác và kịp thời</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-slate-50 to-slate-100 hover:from-slate-100 hover:to-slate-200 transition-all duration-300">
+                                <div class="w-8 h-8 bg-gradient-to-r from-slate-500 to-slate-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-tasks text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Kiểm soát tiến độ</h4>
+                                    <p class="text-text-secondary text-sm">Kiểm soát tiến độ thực hiện các hoạt động chất lượng</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Staff Benefits -->
+                <div data-aos="fade-left">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-gradient-to-r from-accent to-amber-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-users text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-text-primary">Nhân viên được hỗ trợ:</h3>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 hover:from-amber-100 hover:to-amber-200 transition-all duration-300">
+                                <div class="w-8 h-8 bg-gradient-to-r from-accent to-amber-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-mouse-pointer text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Thao tác đơn giản</h4>
+                                    <p class="text-text-secondary text-sm">Giao diện thân thiện, dễ sử dụng cho mọi đối tượng</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 transition-all duration-300">
+                                <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-sync-alt text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Tự động hóa</h4>
+                                    <p class="text-text-secondary text-sm">Tự động hóa các quy trình lặp lại, giảm thiểu sai sót</p>
+                                </div>
+                                                        </div>
+                            
+                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-slate-50 to-slate-100 hover:from-slate-100 hover:to-slate-200 transition-all duration-300">
+                                <div class="w-8 h-8 bg-gradient-to-r from-slate-500 to-slate-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-mobile-alt text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Truy cập linh hoạt</h4>
+                                    <p class="text-text-secondary text-sm">Truy cập mọi lúc, mọi nơi trên thiết bị di động</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full mb-6">
+                    <i class="fas fa-cogs text-accent"></i>
+                    <span class="text-primary font-semibold">Quy trình triển khai</span>
+                </div>
+                
+                <h2 class="text-4xl lg:text-6xl font-bold gradient-text mb-6">
+                    Đơn giản & Hiệu quả
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                    Chỉ với 4 bước đơn giản, bạn có thể sở hữu hệ thống ISO điện tử hoàn chỉnh
+                </p>
+            </div>
+            
+            <!-- Steps -->
+            <div class="relative">
+                <!-- Connection Line -->
+                <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent transform -translate-y-1/2 z-0"></div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-300 shadow-lg">
+                                <span class="text-2xl font-bold text-white">1</span>
+                            </div>
+                            <div class="absolute inset-0 bg-primary/20 rounded-full animate-ping group-hover:animate-none"></div>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50">
+                            <div class="w-12 h-12 bg-gradient-to-r from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-comments text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-primary mb-3">Liên hệ tư vấn</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Đội ngũ chuyên gia CUSC sẽ tư vấn giải pháp phù hợp với đặc thù cơ quan của bạn
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-r from-accent to-amber-600 rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-300 shadow-lg">
+                                <span class="text-2xl font-bold text-white">2</span>
+                            </div>
+                            <div class="absolute inset-0 bg-accent/20 rounded-full animate-ping group-hover:animate-none"></div>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50">
+                            <div class="w-12 h-12 bg-gradient-to-r from-amber-100 to-amber-200 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-cog text-accent text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-primary mb-3">Cài đặt & Cấu hình</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Triển khai hệ thống, cấu hình theo quy trình ISO hiện tại của cơ quan
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-r from-slate-500 to-slate-600 rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-300 shadow-lg">
+                                <span class="text-2xl font-bold text-white">3</span>
+                            </div>
+                            <div class="absolute inset-0 bg-slate-500/20 rounded-full animate-ping group-hover:animate-none"></div>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50">
+                            <div class="w-12 h-12 bg-gradient-to-r from-slate-100 to-slate-200 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-graduation-cap text-slate-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-primary mb-3">Đào tạo sử dụng</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Đội ngũ kỹ thuật sẽ đào tạo chi tiết cho cán bộ, nhân viên sử dụng hệ thống
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="text-center group" data-aos="fade-up" data-aos-delay="400">
+                        <div class="relative mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-300 shadow-lg">
+                                <span class="text-2xl font-bold text-white">4</span>
+                            </div>
+                            <div class="absolute inset-0 bg-primary/20 rounded-full animate-ping group-hover:animate-none"></div>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50">
+                            <div class="w-12 h-12 bg-gradient-to-r from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-headset text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-primary mb-3">Vận hành & Hỗ trợ</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Hỗ trợ kỹ thuật 24/7, bảo trì hệ thống và nâng cấp tính năng liên tục
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-20 bg-white relative overflow-hidden" id="proof">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-primary/10 to-accent/10 px-6 py-3 rounded-full mb-6">
+                    <i class="fas fa-award text-accent"></i>
+                    <span class="text-primary font-semibold">Thành tích & Chứng nhận</span>
+                </div>
+                
+                <h2 class="text-4xl lg:text-6xl font-bold gradient-text mb-6">
+                    Được tin tưởng bởi hàng đầu
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                    Được công nhận và tin tưởng bởi các cơ quan hàng đầu
+                </p>
+            </div>
+            
+            <!-- Awards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="group tilt-card bg-gradient-to-br from-accent to-amber-600 rounded-3xl p-8 text-white text-center shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="flip-left" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-trophy text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Bằng khen sáng tạo</h3>
+                    <p class="opacity-90">CUSC-IS00 (2018)</p>
+                </div>
+                
+                <div class="group tilt-card bg-gradient-to-br from-primary to-secondary rounded-3xl p-8 text-white text-center shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="flip-left" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-medal text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Giải thưởng chuyển đổi số</h3>
+                    <p class="opacity-90">Việt Nam 2019</p>
+                </div>
+                
+                <div class="group tilt-card bg-gradient-to-br from-slate-500 to-slate-600 rounded-3xl p-8 text-white text-center shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="flip-left" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-star text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Giải thưởng Sao Khuê</h3>
+                    <p class="opacity-90">2018</p>
+                </div>
+                
+                <div class="group tilt-card bg-gradient-to-br from-primary to-secondary rounded-3xl p-8 text-white text-center shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="flip-left" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-building text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">TOP 10 Doanh nghiệp</h3>
+                    <p class="opacity-90">CNTT Việt Nam 2022</p>
+                </div>
+            </div>
+            
+            <!-- Deployment Stats -->
+            <div class="bg-gradient-to-br from-light-bg to-blue-50 rounded-3xl p-8 lg:p-12 shadow-lg" data-aos="fade-up">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-text-primary mb-4">Phạm vi triển khai toàn quốc</h3>
+                    <p class="text-xl text-text-secondary">857+ cơ quan tin tưởng trên 7 tỉnh/thành phố</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center group" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="w-24 h-24 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-all duration-300 shadow-lg">
+                            <span class="text-2xl font-bold text-white counter" data-target="130">0</span>
+                        </div>
+                                                <h4 class="text-lg font-bold text-text-primary mb-2">Cà Mau</h4>
+                        <p class="text-text-secondary">Cơ quan triển khai</p>
+                    </div>
+                    
+                    <div class="text-center group" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="w-24 h-24 bg-gradient-to-r from-accent to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-all duration-300 shadow-lg">
+                            <span class="text-2xl font-bold text-white counter" data-target="227">0</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-text-primary mb-2">Quảng Ninh</h4>
+                        <p class="text-text-secondary">Cơ quan triển khai</p>
+                    </div>
+                    
+                    <div class="text-center group" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="w-24 h-24 bg-gradient-to-r from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-all duration-300 shadow-lg">
+                            <span class="text-2xl font-bold text-white counter" data-target="208">0</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-text-primary mb-2">Quảng Bình</h4>
+                        <p class="text-text-secondary">Cơ quan triển khai</p>
+                    </div>
+                    
+                    <div class="text-center group" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="w-24 h-24 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-all duration-300 shadow-lg">
+                            <span class="text-2xl font-bold text-white counter" data-target="133">0</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-text-primary mb-2">Trà Vinh</h4>
+                        <p class="text-text-secondary">Cơ quan triển khai</p>
+                    </div>
+                    
+                    <div class="text-center group" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="w-24 h-24 bg-gradient-to-r from-accent to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-all duration-300 shadow-lg">
+                            <span class="text-2xl font-bold text-white counter" data-target="77">0</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-text-primary mb-2">Đắk Nông</h4>
+                        <p class="text-text-secondary">Cơ quan triển khai</p>
+                    </div>
+                    
+                    <div class="text-center group" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="w-24 h-24 bg-gradient-to-r from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-all duration-300 shadow-lg">
+                            <span class="text-2xl font-bold text-white counter" data-target="42">0</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-text-primary mb-2">Sóc Trăng</h4>
+                        <p class="text-text-secondary">Cơ quan triển khai</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Priority Product Badge -->
+            <div class="text-center mt-12" data-aos="fade-up">
+                <div class="inline-flex items-center space-x-4 bg-gradient-to-r from-accent to-amber-600 text-white px-8 py-6 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-check-circle text-3xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-xl font-bold mb-1">Sản phẩm ưu tiên mua sắm</h3>
+                        <p class="opacity-90">Được Bộ Thông tin và Truyền thông công bố trong danh mục</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-primary via-secondary to-primary relative overflow-hidden" id="contact">
+        <!-- Animated Background -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/90"></div>
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute animate-float" style="top: 10%; left: 10%;">
+                    <div class="w-8 h-8 bg-white rounded-full"></div>
+                </div>
+                <div class="absolute animate-float" style="top: 20%; right: 20%; animation-delay: 2s;">
+                    <div class="w-12 h-12 bg-accent rounded-full"></div>
+                </div>
+                <div class="absolute animate-float" style="bottom: 30%; left: 30%; animation-delay: 4s;">
+                    <div class="w-10 h-10 bg-white rounded-full"></div>
+                </div>
+                <div class="absolute animate-float" style="bottom: 20%; right: 10%; animation-delay: 6s;">
+                    <div class="w-6 h-6 bg-accent rounded-full"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center text-white" data-aos="fade-up">
+                <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-8">
+                    <i class="fas fa-rocket text-accent"></i>
+                    <span class="font-semibold">Bắt đầu ngay hôm nay</span>
+                </div>
+                
+                <h2 class="text-4xl lg:text-6xl font-bold mb-6">
+                    Sẵn sàng <span class="text-accent">cách mạng hóa</span><br>
+                    quy trình ISO của bạn?
+                </h2>
+                
+                <p class="text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto mb-12 leading-relaxed">
+                    Tham gia cùng 857+ cơ quan đã tin tưởng CUSC-IS00. Từ 6 tháng xuống 2 tuần - Hãy trải nghiệm sự khác biệt!
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12" data-aos="fade-up" data-aos-delay="200">
+                    <a href="tel:0292-3831-301" class="group magnetic-button bg-gradient-to-r from-accent to-amber-600 text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl hover:shadow-accent/40 glow-effect transform hover:scale-105 transition-all duration-300 flex items-center space-x-3">
+                        <i class="fas fa-phone-alt group-hover:animate-bounce"></i>
+                        <span>Gọi ngay: 0292-3831-301</span>
+                    </a>
+                    
+                    <a href="mailto:info@cusc.ctu.edu.vn" class="group magnetic-button glass-effect text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-white hover:text-primary transition-all duration-300 flex items-center space-x-3 border-2 border-white/30">
+                        <i class="fas fa-envelope group-hover:animate-pulse"></i>
+                        <span>Đăng ký Demo miễn phí</span>
+                    </a>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-phone text-white text-xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="font-semibold">Hotline</div>
+                            <div class="opacity-90">0292-3831-301</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-envelope text-white text-xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="font-semibold">Email</div>
+                            <div class="opacity-90">info@cusc.ctu.edu.vn</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-clock text-white text-xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="font-semibold">Hỗ trợ</div>
+                            <div class="opacity-90">24/7</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="mt-12 pt-8 border-t border-white/20" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex flex-wrap justify-center items-center gap-8 opacity-80">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-shield-alt text-green-400"></i>
+                            <span>Bảo mật cao</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-award text-yellow-400"></i>
+                            <span>Giải thưởng Sao Khuê</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-users text-blue-400"></i>
+                            <span>857+ cơ quan tin tưởng</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-headset text-purple-400"></i>
+                            <span>Hỗ trợ 24/7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Main Footer Content -->
+            <div class="py-16">
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+                    <!-- Company Info -->
+                    <div class="lg:col-span-2" data-aos="fade-up">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">CUSC-IS00</h3>
+                                <p class="text-gray-400 text-sm">ISO điện tử hàng đầu</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 leading-relaxed mb-6 max-w-md">
+                            Phần mềm ISO điện tử hàng đầu Việt Nam, được phát triển bởi Trung tâm Công nghệ Phần mềm Đại học Cần Thơ. Giải pháp toàn diện cho chính quyền điện tử.
+                        </p>
+                        
+                        <!-- Rating -->
+                        <div class="flex items-center space-x-2 mb-6">
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                            <span class="text-gray-300">857+ cơ quan tin tưởng</span>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors duration-300">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="mailto:info@cusc.ctu.edu.vn" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors duration-300">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Products -->
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="text-lg font-bold mb-6 text-accent">Sản phẩm</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#features" class="text-gray-300 hover:text-accent transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fas fa-chevron-right text-xs"></i>
+                                <span>Tính năng</span>
+                            </a></li>
+                            <li><a href="#benefits" class="text-gray-300 hover:text-accent transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fas fa-chevron-right text-xs"></i>
+                                <span>Lợi ích</span>
+                            </a></li>
+                            <li><a href="#proof" class="text-gray-300 hover:text-accent transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fas fa-chevron-right text-xs"></i>
+                                <span>Thành tích</span>
+                            </a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fas fa-chevron-right text-xs"></i>
+                                <span>Tài liệu hướng dẫn</span>
+                            </a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fas fa-chevron-right text-xs"></i>
+                                <span>Demo trực tuyến</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Support -->
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="text-lg font-bold mb-6 text-accent">Hỗ trợ</h4>
+                        <ul class="space-y-3">
+                            <li><a href="tel:0292-3831-301" class="text-gray-300 hover:text-accent transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fas fa-phone text-green-400"></i>
+                                <span>Hotline: 0292-3831-301</span>
+                            </a></li>
+                            <li><a href="mailto:info@cusc.ctu.edu.vn" class="text-gray-300 hover:text-accent transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fas fa-envelope text-blue-400"></i>
+                                <span>info@cusc.ctu.edu.vn</span>
+                            </a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fas fa-question-circle text-purple-400"></i>
+                                <span>Trung tâm trợ giúp</span>
+                            </a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fas fa-graduation-cap text-orange-400"></i>
+                                <span>Đào tạo</span>
+                            </a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fas fa-tools text-red-400"></i>
+                                <span>Bảo trì & Nâng cấp</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 py-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+                    <div class="text-center lg:text-left">
+                        <p class="text-gray-400 mb-2">
+                            &copy; 2024 CUSC - Cantho University Software Center. All rights reserved.
+                        </p>
+                        <p class="text-gray-500 text-sm">
+                            Địa chỉ: Đại học Cần Thơ, Khu II, đường 3/2, P. Xuân Khánh, Q. Ninh Kiều, TP. Cần Thơ
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center space-x-6">
+                        <a href="https://www.cusc.ctu.edu.vn" target="_blank" class="text-gray-400 hover:text-accent transition-colors duration-300 text-sm">
+                            Website chính thức
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors duration-300 text-sm">
+                            Chính sách bảo mật
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors duration-300 text-sm">
+                            Điều khoản sử dụng
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-primary to-accent text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 opacity-0 invisible z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- Schema.org structured data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "CUSC-IS00",
+        "description": "Phần mềm ISO điện tử hàng đầu Việt Nam cho chính quyền điện tử",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web-based",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "VND",
+            "description": "Demo miễn phí"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "CUSC - Cantho University Software Center",
+            "url": "https://www.cusc.ctu.edu.vn",
+            "telephone": "+84-292-3831-301",
+            "email": "info@cusc.ctu.edu.vn"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "ratingCount": "857"
+                }
+    }
+    </script>
+
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="CUSC-IS00 - Phần mềm ISO điện tử hàng đầu Việt Nam">
+    <meta property="og:description" content="857+ cơ quan tin tưởng - Giải pháp ISO điện tử hàng đầu Việt Nam. Từ 6 tháng xuống 2 tuần, cách mạng hóa quy trình ISO của bạn.">
+    <meta property="og:image" content="/images/cusc-is00-og-image.jpg">
+    <meta property="og:url" content="https://cusc-is00.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CUSC-IS00">
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CUSC-IS00 - Phần mềm ISO điện tử hàng đầu Việt Nam">
+    <meta name="twitter:description" content="857+ cơ quan tin tưởng - Giải pháp ISO điện tử hàng đầu Việt Nam">
+    <meta name="twitter:image" content="/images/cusc-is00-twitter-card.jpg">
+
+    <!-- Additional meta tags for SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" content="CUSC - Cantho University Software Center">
+    <meta name="publisher" content="CUSC - Cantho University Software Center">
+    <meta name="copyright" content="© 2024 CUSC - Cantho University Software Center">
+    <meta name="language" content="vi">
+    <meta name="geo.region" content="VN">
+    <meta name="geo.placename" content="Can Tho, Vietnam">
+    <meta name="geo.position" content="10.0452;105.7469">
+    <meta name="ICBM" content="10.0452, 105.7469">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://cusc-is00.com">
+
+    <!-- Alternate language versions -->
+    <link rel="alternate" hreflang="vi" href="https://cusc-is00.com">
+    <link rel="alternate" hreflang="en" href="https://cusc-is00.com/en">
+
+    <!-- Favicon and app icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0D47A1">
+    <meta name="msapplication-TileColor" content="#0D47A1">
+
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//unpkg.com">
+
+    <!-- Critical CSS inlined for performance -->
+    <style>
+        /* Critical above-the-fold styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .hero-bg {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0D47A1 0%, #1976D2 50%, #2196F3 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .text-white {
+            color: white;
+        }
+        
+        .font-bold {
+            font-weight: 700;
+        }
+        
+        .text-5xl {
+            font-size: 3rem;
+            line-height: 1;
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\\:text-7xl {
+                font-size: 4.5rem;
+            }
+        }
+    </style>
+
+    <!-- Service Worker for PWA functionality -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+
+    <!-- Google Analytics (replace with your tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+
+    <!-- Facebook Pixel (replace with your pixel ID) -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+
+    <!-- Hotjar Tracking Code (replace with your site ID) -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    <!-- Microsoft Clarity (replace with your project ID) -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "YOUR_CLARITY_ID");
+    </script>
+
+    <!-- Accessibility enhancements -->
+    <script>
+        // Skip to main content functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const skipLink = document.createElement('a');
+            skipLink.href = '#main-content';
+            skipLink.textContent = 'Bỏ qua đến nội dung chính';
+            skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-primary text-white p-2 z-50';
+            document.body.insertBefore(skipLink, document.body.firstChild);
+        });
+
+        // Announce page changes for screen readers
+        function announcePageChange(message) {
+            const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live', 'polite');
+            announcement.setAttribute('aria-atomic', 'true');
+            announcement.className = 'sr-only';
+            announcement.textContent = message;
+            document.body.appendChild(announcement);
+            
+            setTimeout(() => {
+                document.body.removeChild(announcement);
+            }, 1000);
+        }
+
+        // High contrast mode toggle
+        function toggleHighContrast() {
+            document.body.classList.toggle('high-contrast');
+            const isHighContrast = document.body.classList.contains('high-contrast');
+            localStorage.setItem('highContrast', isHighContrast);
+            announcePageChange(isHighContrast ? 'Chế độ tương phản cao đã bật' : 'Chế độ tương phản cao đã tắt');
+        }
+
+        // Load saved accessibility preferences
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('highContrast') === 'true') {
+                document.body.classList.add('high-contrast');
+            }
+        });
+    </script>
+
+    <!-- Error boundary for JavaScript errors -->
+    <script>
+        window.addEventListener('error', function(e) {
+            console.error('JavaScript error:', e.error);
+            // Send error to analytics or error reporting service
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'exception', {
+                    'description': e.error.toString(),
+                    'fatal': false
+                });
+            }
+        });
+
+        window.addEventListener('unhandledrejection', function(e) {
+            console.error('Unhandled promise rejection:', e.reason);
+            // Send error to analytics or error reporting service
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'exception', {
+                    'description': e.reason.toString(),
+                    'fatal': false
+                });
+            }
+        });
+    </script>
+
+    <!-- Performance monitoring -->
+    <script>
+        // Core Web Vitals monitoring
+        function getCLS(onPerfEntry) {
+            if (onPerfEntry && onPerfEntry instanceof Function) {
+                import('web-vitals').then(({getCLS}) => getCLS(onPerfEntry));
+            }
+        }
+
+        function getFID(onPerfEntry) {
+            if (onPerfEntry && onPerfEntry instanceof Function) {
+                import('web-vitals').then(({getFID}) => getFID(onPerfEntry));
+            }
+        }
+
+        function getFCP(onPerfEntry) {
+            if (onPerfEntry && onPerfEntry instanceof Function) {
+                import('web-vitals').then(({getFCP}) => getFCP(onPerfEntry));
+            }
+        }
+
+        function getLCP(onPerfEntry) {
+            if (onPerfEntry && onPerfEntry instanceof Function) {
+                import('web-vitals').then(({getLCP}) => getLCP(onPerfEntry));
+            }
+        }
+
+        function getTTFB(onPerfEntry) {
+            if (onPerfEntry && onPerfEntry instanceof Function) {
+                import('web-vitals').then(({getTTFB}) => getTTFB(onPerfEntry));
+            }
+        }
+
+        function sendToAnalytics(metric) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', metric.name, {
+                    event_category: 'Web Vitals',
+                    value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+                    event_label: metric.id,
+                    non_interaction: true,
+                });
+            }
+        }
+
+        // Initialize Core Web Vitals monitoring
+        getCLS(sendToAnalytics);
+        getFID(sendToAnalytics);
+        getFCP(sendToAnalytics);
+        getLCP(sendToAnalytics);
+        getTTFB(sendToAnalytics);
+    </script>
+
+    <!-- Final initialization script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all components
+            console.log('🚀 CUSC-IS00 Website fully loaded and initialized!');
+            
+            // Track page load completion
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_load_complete', {
+                    event_category: 'engagement',
+                    event_label: 'homepage'
+                });
+            }
+            
+            // Remove preloader
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                setTimeout(() => {
+                    preloader.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.remove();
+                    }, 500);
+                }, 1000);
+            }
+            
+            // Announce page ready for screen readers
+            announcePageChange('Trang web CUSC-IS00 đã tải xong');
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
