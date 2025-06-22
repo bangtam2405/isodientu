@@ -13,11 +13,12 @@
         }
         
         .gradient-text {
-            background: linear-gradient(135deg, #1e40af, #f59e0b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #1e40af !important;
+            background: none !important;
+            -webkit-text-fill-color: #1e40af !important;
+            text-shadow: 2px 2px 4px rgba(30, 64, 175, 0.2);
         }
+
         
         .hover-lift {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -127,18 +128,6 @@
         @keyframes blink-caret {
             from, to { border-color: transparent }
             50% { border-color: #f59e0b }
-        }
-        
-        .scroll-indicator {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #1e40af, #f59e0b);
-            transform-origin: left;
-            transform: scaleX(0);
-            z-index: 9999;
         }
         
         .magnetic-button {
@@ -371,15 +360,30 @@
             animation: glow 2s ease-in-out infinite alternate;
         }
 
-        .gradient-text {
-            background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--primary-color));
-            background-size: 400% 400%;
+        .gradient-text-working {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #f59e0b 100%);
+            background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradient-shift 4s ease infinite;
+            display: inline-block;
+            animation: gradient-shift 3s ease infinite;
         }
 
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Fallback nếu gradient không work */
+        @supports not (-webkit-background-clip: text) {
+            .gradient-text-working {
+                background: none;
+                color: #1e40af;
+                -webkit-text-fill-color: #1e40af;
+            }
+        }
         .glass-effect {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -415,12 +419,6 @@
 
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
-        }
-
-        /* Selection color */
-        ::selection {
-            background: var(--accent-color);
-            color: white;
         }
 
         ::-moz-selection {
@@ -527,4 +525,135 @@
 }
 
         
-        
+/* Thêm vào cuối file style.css */
+
+/* Modal styles */
+#fullImageModal {
+    backdrop-filter: blur(10px);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#fullImage {
+    transition: all 0.3s ease;
+    cursor: zoom-in;
+    max-width: none;
+    max-height: none;
+}
+
+#fullImage:hover {
+    filter: brightness(1.05);
+}
+
+/* Loading effect cho ảnh */
+.image-loading {
+    position: relative;
+}
+
+.image-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive cho modal */
+@media (max-width: 768px) {
+    #fullImageModal .relative {
+        margin: 1rem;
+    }
+    
+    #fullImage {
+        max-height: 60vh;
+    }
+    
+    .absolute.left-4,
+    .absolute.right-4 {
+        display: none;
+    }
+}
+
+/* Smooth transitions cho award images */
+.award-image-container {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.award-image-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Active Navigation Styles */
+.nav-link.active {
+    color: #f59e0b !important;
+    background: rgba(245, 158, 11, 0.1) !important;
+}
+
+.nav-link.active .nav-underline {
+    width: 80% !important;
+    background: linear-gradient(90deg, #f59e0b, #fbbf24) !important;
+}
+
+.nav-link-mobile.active {
+    color: #f59e0b !important;
+    background: rgba(245, 158, 11, 0.1) !important;
+}
+
+/* Header khi scroll - compact hơn */
+.header-scrolled nav {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+}
+
+.header-scrolled .min-h-\[3\.5rem\] {
+    min-height: 2.5rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .min-h-\[3\.5rem\] {
+        min-height: 2.5rem;
+    }
+    
+    .w-24 {
+        width: 5rem;
+    }
+    
+    .h-12 {
+        height: 2.5rem;
+    }
+    
+    .w-20 {
+        width: 4rem;
+    }
+    
+    .h-10 {
+        height: 2rem;
+    }
+}
+
+

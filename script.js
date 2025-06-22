@@ -466,7 +466,242 @@ tailwind.config = {
             });
         }
 
-        console.log('🚀 CUSC-IS00 Website loaded successfully!');
+        // Thêm vào cuối file script.js
+
+// Array chứa thông tin các ảnh giải thưởng
+const awardImages = [
+    {
+        src: 'image/top10.jpg',
+        title: 'TOP 10 Doanh nghiệp CNTT Việt Nam 2022',
+        description: 'Vinh danh CUSC trong danh sách 10 doanh nghiệp CNTT hàng đầu'
+    },
+    {
+        src: 'image/chungnhan.png',
+        title: 'Giải thưởng chuyển đổi số Việt Nam 2019',
+        description: 'Công nhận đóng góp xuất sắc trong chuyển đổi số quốc gia'
+    },
+    {
+        src: 'image/saokhueISO.jpg',
+        title: 'Giải thưởng Sao Khuê 2018',
+        description: 'Giải thưởng danh giá nhất ngành CNTT Việt Nam'
+    }
+];
+
+let currentImageIndex = 0;
+
+// Mở modal xem ảnh full size
+function viewFullImage(imageSrc, title) {
+    // Tìm index của ảnh hiện tại
+    currentImageIndex = awardImages.findIndex(img => img.src === imageSrc);
+    
+    const modal = document.getElementById('fullImageModal');
+    const image = document.getElementById('fullImage');
+    const titleElement = document.getElementById('fullImageTitle');
+    
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    image.src = imageSrc;
+    titleElement.textContent = title;
+    
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+    
+    // Add loading effect
+    image.style.opacity = '0';
+    image.onload = function() {
+        image.style.opacity = '1';
+        image.style.transition = 'opacity 0.3s ease';
+    };
+}
+
+// Đóng modal
+function closeFullImage() {
+    const modal = document.getElementById('fullImageModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = 'auto';
+}
+
+// Xem ảnh trước
+function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + awardImages.length) % awardImages.length;
+    const currentImage = awardImages[currentImageIndex];
+    
+    const image = document.getElementById('fullImage');
+    const titleElement = document.getElementById('fullImageTitle');
+    
+    image.style.opacity = '0';
+    setTimeout(() => {
+        image.src = currentImage.src;
+        titleElement.textContent = currentImage.title;
+        image.style.opacity = '1';
+    }, 150);
+}
+
+// Xem ảnh tiếp theo
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % awardImages.length;
+    const currentImage = awardImages[currentImageIndex];
+    
+    const image = document.getElementById('fullImage');
+    const titleElement = document.getElementById('fullImageTitle');
+    
+    image.style.opacity = '0';
+    setTimeout(() => {
+        image.src = currentImage.src;
+        titleElement.textContent = currentImage.title;
+        image.style.opacity = '1';
+    }, 150);
+}
+
+// Tải ảnh về máy
+function downloadImage() {
+    const image = document.getElementById('fullImage');
+    const link = document.createElement('a');
+    link.href = image.src;
+    link.download = `cusc-award-${Date.now()}.jpg`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+// Đóng modal khi nhấn ESC
+document.addEventListener('keydown', function(e) {
+    const modal = document.getElementById('fullImageModal');
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeFullImage();
+    }
+    // Navigation với arrow keys
+    if (!modal.classList.contains('hidden')) {
+        if (e.key === 'ArrowLeft') {
+            prevImage();
+        } else if (e.key === 'ArrowRight') {
+            nextImage();
+        }
+    }
+});
+
+// Đóng modal khi click bên ngoài
+document.getElementById('fullImageModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeFullImage();
+    }
+});
+
+// Thêm zoom functionality cho ảnh trong modal
+let isZoomed = false;
+let zoomLevel = 1;
+
+document.getElementById('fullImage').addEventListener('click', function(e) {
+    e.stopPropagation();
+    
+    if (!isZoomed) {
+        this.style.transform = 'scale(1.5)';
+        this.style.cursor = 'zoom-out';
+        isZoomed = true;
+        zoomLevel = 1.5;
+    } else {
+        this.style.transform = 'scale(1)';
+        this.style.cursor = 'zoom-in';
+        isZoomed = false;
+        zoomLevel = 1;
+    }
+});
+
+// Mouse wheel zoom
+document.getElementById('fullImage').addEventListener('wheel', function(e) {
+    e.preventDefault();
+    
+    if (e.deltaY < 0) {
+        // Zoom in
+        zoomLevel = Math.min(zoomLevel + 0.1, 3);
+    } else {
+        // Zoom out
+        zoomLevel = Math.max(zoomLevel - 0.1, 0.5);
+    }
+    
+    this.style.transform = `scale(${zoomLevel})`;
+    
+    if (zoomLevel > 1) {
+        this.style.cursor = 'zoom-out';
+        isZoomed = true;
+    } else {
+        this.style.cursor = 'zoom-in';
+        isZoomed = false;
+    }
+});
+
+
+        console.log('🚀 CUSC-ISO Website loaded successfully!');
         console.log('📞 Liên hệ: 0292-3831-301');
         console.log('📧 Email: info@cusc.ctu.edu.vn');
         console.log('🌐 Website: https://www.cusc.ctu.edu.vn');
+
+// Thêm vào cuối file script.js
+
+// Active Navigation Handler
+function updateActiveNavigation() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link, .nav-link-mobile');
+    
+    let currentSection = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        const scrollPosition = window.pageYOffset + 200; // Offset for header
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+    
+    // Remove active class from all links
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Add active class to current section link
+    if (currentSection) {
+        const activeLinks = document.querySelectorAll(`a[href="#${currentSection}"]`);
+        activeLinks.forEach(link => {
+            if (link.classList.contains('nav-link') || link.classList.contains('nav-link-mobile')) {
+                link.classList.add('active');
+            }
+        });
+    }
+}
+
+// Update active navigation on scroll
+window.addEventListener('scroll', updateActiveNavigation);
+
+// Update active navigation on page load
+document.addEventListener('DOMContentLoaded', updateActiveNavigation);
+
+// Smooth scroll với active update
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const headerHeight = document.getElementById('header').offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+            }
+            
+            // Update active navigation immediately
+            setTimeout(updateActiveNavigation, 100);
+        }
+    });
+});
+
+
