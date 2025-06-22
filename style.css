@@ -233,21 +233,19 @@
 
     @media (max-width: 640px) {
         #header nav {
-            padding: 1rem 1rem;
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
         }
-        
-        .min-h-\[4rem\] {
-            min-height: 3rem;
+        .min-h-\[5rem\] {
+            min-height: 3rem !important;
         }
-        
         .logo-container {
-            width: 5rem;
-            height: 3rem;
+            width: 3.2rem !important;
+            height: 2rem !important;
         }
-        
         .logo-container img {
-            width: 4.5rem;
-            height: 2.5rem;
+            width: 2.8rem !important;
+            height: 1.6rem !important;
         }
     }
 
