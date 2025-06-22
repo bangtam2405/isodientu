@@ -614,7 +614,7 @@
 }
 
 .nav-link.active .nav-underline {
-    width: 80% !important;
+    width: 100% !important;
     background: linear-gradient(90deg, #f59e0b, #fbbf24) !important;
 }
 
