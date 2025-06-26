@@ -29,13 +29,9 @@
         <nav class="container mx-auto px-6 py-8">
             <div class="flex items-center justify-between min-h-[5rem]">
                 <!-- Logo -->
-                <div class="flex items-center text-white" data-aos="fade-right">
-                    <div class="relative group">
-                        <div class="w-32 h-18 bg-white rounded-2xl flex items-center justify-center transform hover:scale-105 transition-all duration-300 overflow-hidden border-2 border-white shadow-lg">
-                            <img src="image/logocusc.jpg" alt="CUSC Logo" class="w-28 h-16 object-contain rounded-xl">
-                        </div>
-                        <!-- Glow effect -->
-                        <div class="absolute inset-0 bg-gradient-to-r from-accent/30 to-amber-600/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm -z-10"></div>
+                <div class="flex items-center" data-aos="fade-right">
+                    <div class="bg-white/90 rounded-lg p-0 inline-flex">
+                        <img src="image/logocusc1.png" alt="CUSC Logo" class="w-40 h-20 object-contain">
                     </div>
                 </div>          
                 <!-- Desktop Menu -->
@@ -155,19 +151,19 @@
                 <div class="relative" data-aos="fade-left" data-aos-duration="1000">
                     <div class="relative z-10">
                         <!-- Main Mockup -->
-                        <div class="morphism p-8 rounded-3xl transform hover:rotate-2 transition-transform duration-500 hover-lift">
-                            <div class="bg-gradient-to-br from-white to-gray-100 rounded-2xl p-4 shadow-2xl overflow-hidden">
-                                <div class="flex items-center justify-center h-64">
-                                    <img src="image/ISOdientu.png" alt="CUSC-ISO Dashboard" class="w-full h-full object-cover rounded-xl shadow-lg">
+                        <div class="morphism p-4 rounded-xl transform hover:rotate-2 transition-transform duration-500 hover-lift">
+                            <div class="bg-gradient-to-br from-white to-gray-100 rounded-lg p-4 shadow-2xl overflow-hidden border border-gray-200">
+                                <div class="flex items-center justify-center h-72 w-full">
+                                    <img src="image/ISOdientu.png" alt="CUSC-ISO Dashboard" class="w-full h-full object-cover shadow-lg">
                                 </div>
                             </div>
                         </div>
                         <!-- Floating Elements -->
-                        <div class="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-accent to-amber-600 rounded-2xl flex items-center justify-center animate-bounce-slow">
-                            <i class="fas fa-check text-white text-xl"></i>
+                        <div class="absolute -top-2 -right-2 w-10 h-10 bg-gradient-to-r from-accent to-amber-600 rounded-xl flex items-center justify-center animate-bounce-slow shadow-md">
+                            <i class="fas fa-check text-white text-lg"></i>
                         </div>
-                        <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center animate-float">
-                            <i class="fas fa-star text-white"></i>
+                        <div class="absolute -bottom-2 -left-2 w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center animate-float shadow-md">
+                            <i class="fas fa-star text-white text-base"></i>
                         </div>
                     </div>
                     
@@ -176,7 +172,7 @@
                         <div class="absolute top-10 right-10 w-32 h-32 bg-accent/20 rounded-full animate-spin-slow"></div>
                         <div class="absolute bottom-10 left-10 w-24 h-24 bg-white/20 rounded-lg transform rotate-45 animate-pulse"></div>
                     </div>
-                </div>
+                </div>          
             </div>
         </div>
     </section>
@@ -187,7 +183,7 @@
         <div class="absolute inset-0 opacity-5">
             <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, #1e40af 2px, transparent 2px), radial-gradient(circle at 75% 75%, #f59e0b 2px, transparent 2px); background-size: 50px 50px;"></div>
         </div>
-        
+            
         <div class="container mx-auto px-6 relative z-10">
             <!-- Section Header -->
             <div class="text-center mb-16" data-aos="fade-up">
@@ -199,46 +195,48 @@
                 </p>
                 <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6 rounded-full"></div>
             </div>
+            
             <!-- Problem Cards -->
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                <div class="group card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-4 hover:scale-110 hover:bg-gray-50 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
                     <div class="relative mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center mx-auto transform -rotate-6 hover:rotate-0 transition-transform duration-300">
-                            <i class="fas fa-clock text-white text-2xl"></i>
+                        <div class="w-16 h-16 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-125 group-hover:shadow-xl transition-all duration-500">
+                            <i class="fas fa-clock text-white text-2xl group-hover:text-3xl transition-all duration-300"></i>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-text-primary mb-4 text-center">Tốn thời gian</h3>
-                    <p class="text-text-secondary text-center leading-relaxed">
+                    <h3 class="text-2xl font-bold text-text-primary mb-4 text-center group-hover:text-gray-600 group-hover:text-3xl transition-all duration-300">Tốn thời gian</h3>
+                    <p class="text-text-secondary text-center leading-relaxed group-hover:text-gray-700 group-hover:font-medium transition-all duration-300">
                         Quy trình thủ công mất 6+ tháng để triển khai, kiểm soát tài liệu phức tạp, theo dõi tiến độ khó khăn
                     </p>
                 </div>
-                
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                            
+                <div class="group card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-4 hover:scale-110 hover:bg-amber-50 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
                     <div class="relative mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-accent to-amber-600 rounded-2xl flex items-center justify-center mx-auto transform rotate-6 hover:rotate-0 transition-transform duration-300">
-                            <i class="fas fa-dollar-sign text-white text-2xl"></i>
+                        <div class="w-16 h-16 bg-gradient-to-r from-accent to-amber-600 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-125 group-hover:shadow-xl transition-all duration-500">
+                            <i class="fas fa-dollar-sign text-white text-2xl group-hover:text-3xl transition-all duration-300"></i>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-text-primary mb-4 text-center">Chi phí cao</h3>
-                    <p class="text-text-secondary text-center leading-relaxed">
+                    <h3 class="text-2xl font-bold text-text-primary mb-4 text-center group-hover:text-accent group-hover:text-3xl transition-all duration-300">Chi phí cao</h3>
+                    <p class="text-text-secondary text-center leading-relaxed group-hover:text-amber-700 group-hover:font-medium transition-all duration-300">
                         In ấn, lưu trữ giấy tờ, nhân lực quản lý tài liệu, chi phí duy trì hệ thống hàng năm tốn kém
                     </p>
                 </div>
-                
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                            
+                <div class="group card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-4 hover:scale-110 hover:bg-blue-50 transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
                     <div class="relative mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto transform -rotate-3 hover:rotate-0 transition-transform duration-300">
-                            <i class="fas fa-exclamation-triangle text-white text-2xl"></i>
+                        <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto group-hover:scale-125 group-hover:shadow-xl transition-all duration-500">
+                            <i class="fas fa-exclamation-triangle text-white text-2xl group-hover:text-3xl transition-all duration-300"></i>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-text-primary mb-4 text-center">Rủi ro mất mát</h3>
-                    <p class="text-text-secondary text-center leading-relaxed">
+                    <h3 class="text-2xl font-bold text-text-primary mb-4 text-center group-hover:text-primary group-hover:text-3xl transition-all duration-300">Rủi ro mất mát</h3>
+                    <p class="text-text-secondary text-center leading-relaxed group-hover:text-blue-700 group-hover:font-medium transition-all duration-300">
                         Tài liệu giấy dễ thất lạc, hư hỏng, thông tin không đồng bộ giữa các bộ phận
                     </p>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Solution Section -->
     <section class="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
@@ -385,8 +383,6 @@
             </div>
         </div>
     </section>
-
-
     
 
     <!-- Features Section -->
@@ -753,271 +749,6 @@
         </div>
     </section>
 
-    <!-- Benefits Section
-    <section class="py-20 bg-white relative overflow-hidden" id="benefits">
-        <div class="container mx-auto px-6">
-            Section Header
-            <div class="text-center mb-16" data-aos="fade-up">
-                <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-primary/10 to-accent/10 px-6 py-3 rounded-full mb-6">
-                    <i class="fas fa-trophy text-accent"></i>
-                    <span class="text-primary font-semibold">Lợi ích cốt lõi</span>
-                </div>
-                
-                <h2 class="text-4xl lg:text-6xl font-bold gradient-text mb-6">
-                    Giá trị thiết thực
-                </h2>
-                <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-                    Những giá trị thiết thực mà CUSC-ISO mang lại cho tổ chức của bạn
-                </p>
-            </div>
-            
-            Benefits Stats
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <div class="text-center group" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="relative mb-6">
-                        <div class="w-32 h-32 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                            <span class="text-4xl font-bold text-white counter" data-target="70">0</span>
-                            <span class="text-2xl text-white">%</span>
-                        </div>
-                        <div class="absolute inset-0 bg-primary/20 rounded-full animate-ping"></div>
-                    </div>
-                    <h3 class="text-xl font-bold text-text-primary mb-2">Tiết kiệm thời gian</h3>
-                    <p class="text-text-secondary">So với phương pháp truyền thống</p>
-                </div>
-                
-                <div class="text-center group" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="relative mb-6">
-                        <div class="w-32 h-32 bg-gradient-to-r from-accent to-amber-600 rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                            <span class="text-3xl font-bold text-white">2</span>
-                            <span class="text-lg text-white ml-1">tuần</span>
-                        </div>
-                        <div class="absolute inset-0 bg-accent/20 rounded-full animate-ping"></div>
-                    </div>
-                    <h3 class="text-xl font-bold text-text-primary mb-2">Thời gian triển khai</h3>
-                    <p class="text-text-secondary">Thay vì 6 tháng</p>
-                </div>
-                
-                <div class="text-center group" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="relative mb-6">
-                        <div class="w-32 h-32 bg-gradient-to-r from-slate-500 to-slate-600 rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                            <span class="text-3xl font-bold text-white counter" data-target="100">0</span>
-                            <span class="text-2xl text-white">%</span>
-                        </div>
-                        <div class="absolute inset-0 bg-slate-500/20 rounded-full animate-ping"></div>
-                    </div>
-                    <h3 class="text-xl font-bold text-text-primary mb-2">Tuân thủ quy định</h3>
-                    <p class="text-text-secondary">Thông tư 40/2020/TT-BTTTT</p>
-                </div>
-                
-                <div class="text-center group" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="relative mb-6">
-                        <div class="w-32 h-32 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                            <span class="text-3xl font-bold text-white">24/7</span>
-                        </div>
-                        <div class="absolute inset-0 bg-primary/20 rounded-full animate-ping"></div>
-                    </div>
-                    <h3 class="text-xl font-bold text-text-primary mb-2">Theo dõi dashboard</h3>
-                    <p class="text-text-secondary">Trực tuyến liên tục</p>
-                </div>
-            </div>
-            
-            Detailed Benefits
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                Leadership Benefits 
-                <div data-aos="fade-right">
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center">
-                                <i class="fas fa-user-tie text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-text-primary">Lãnh đạo có thể:</h3>
-                        </div>
-                        
-                        <div class="space-y-4">
-                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 transition-all duration-300">
-                                <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i class="fas fa-chart-line text-white text-sm"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-text-primary mb-1">Dashboard trực quan</h4>
-                                    <p class="text-text-secondary text-sm">Theo dõi mục tiêu chất lượng hằng năm qua dashboard trực quan</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 transition-all duration-300">
-                                <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i class="fas fa-file-alt text-white text-sm"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-text-primary mb-1">Báo cáo tự động</h4>
-                                    <p class="text-text-secondary text-sm">Nhận báo cáo tự động, chính xác và kịp thời</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 transition-all duration-300">
-                                <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i class="fas fa-tasks text-white text-sm"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-text-primary mb-1">Kiểm soát tiến độ</h4>
-                                    <p class="text-text-secondary text-sm">Kiểm soát tiến độ thực hiện các hoạt động chất lượng</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                Staff Benefits
-                <div data-aos="fade-left">
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-12 h-12 bg-gradient-to-r from-accent to-amber-600 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-users text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-text-primary">Nhân viên được hỗ trợ:</h3>
-                        </div>
-                        
-                        <div class="space-y-4">
-                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 hover:from-amber-100 hover:to-amber-200 transition-all duration-300">
-                                <div class="w-8 h-8 bg-gradient-to-r from-accent to-amber-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i class="fas fa-mouse-pointer text-white text-sm"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-text-primary mb-1">Thao tác đơn giản</h4>
-                                    <p class="text-text-secondary text-sm">Giao diện thân thiện, dễ sử dụng cho mọi đối tượng</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 hover:from-amber-100 hover:to-amber-200 transition-all duration-300">
-                                <div class="w-8 h-8 bg-gradient-to-r from-accent to-amber-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i class="fas fa-sync-alt text-white text-sm"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-text-primary mb-1">Tự động hóa</h4>
-                                    <p class="text-text-secondary text-sm">Tự động hóa các quy trình lặp lại, giảm thiểu sai sót</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 hover:from-amber-100 hover:to-amber-200 transition-all duration-300">
-                                <div class="w-8 h-8 bg-gradient-to-r from-accent to-amber-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i class="fas fa-mobile-alt text-white text-sm"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-text-primary mb-1">Truy cập linh hoạt</h4>
-                                    <p class="text-text-secondary text-sm">Truy cập mọi lúc, mọi nơi trên thiết bị di động</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    How It Works 
-    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
-        <div class="container mx-auto px-6">
-             Section Header
-            <div class="text-center mb-16" data-aos="fade-up">
-                <div class="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full mb-6">
-                    <i class="fas fa-cogs text-accent"></i>
-                    <span class="text-primary font-semibold">Quy trình triển khai</span>
-                </div>
-                
-                <h2 class="text-4xl lg:text-6xl font-bold gradient-text mb-6">
-                    Đơn giản & Hiệu quả
-                </h2>
-                <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-                    Chỉ với 4 bước đơn giản, bạn có thể sở hữu hệ thống ISO điện tử hoàn chỉnh
-                </p>
-            </div>
-            
-            Steps 
-            <div class="relative">
-                Connection Line 
-                <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent transform -translate-y-1/2 z-0"></div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
-                    Step 1
-                    <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
-                        <div class="relative mb-6">
-                            <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-300 shadow-lg">
-                                <span class="text-2xl font-bold text-white">1</span>
-                            </div>
-                            <div class="absolute inset-0 bg-primary/20 rounded-full animate-ping group-hover:animate-none"></div>
-                        </div>
-                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50">
-                            <div class="w-12 h-12 bg-gradient-to-r from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-comments text-primary text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-primary mb-3">Liên hệ tư vấn</h3>
-                            <p class="text-text-secondary text-sm leading-relaxed">
-                                Đội ngũ chuyên gia CUSC sẽ tư vấn giải pháp phù hợp với đặc thù cơ quan của bạn
-                            </p>
-                        </div>
-                    </div>
-                    
-                    Step 2
-                    <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="relative mb-6">
-                            <div class="w-20 h-20 bg-gradient-to-r from-accent to-amber-600 rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-300 shadow-lg">
-                                <span class="text-2xl font-bold text-white">2</span>
-                            </div>
-                            <div class="absolute inset-0 bg-accent/20 rounded-full animate-ping group-hover:animate-none"></div>
-                        </div>
-                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50">
-                            <div class="w-12 h-12 bg-gradient-to-r from-amber-100 to-amber-200 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-cog text-accent text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-primary mb-3">Cài đặt & Cấu hình</h3>
-                            <p class="text-text-secondary text-sm leading-relaxed">
-                                Triển khai hệ thống, cấu hình theo quy trình ISO hiện tại của cơ quan
-                            </p>
-                        </div>
-                    </div>
-                    
-                    Step 3
-                    <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
-                        <div class="relative mb-6">
-                            <div class="w-20 h-20 bg-gradient-to-r from-slate-500 to-slate-600 rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-300 shadow-lg">
-                                <span class="text-2xl font-bold text-white">3</span>
-                            </div>
-                            <div class="absolute inset-0 bg-slate-500/20 rounded-full animate-ping group-hover:animate-none"></div>
-                        </div>
-                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50">
-                            <div class="w-12 h-12 bg-gradient-to-r from-slate-100 to-slate-200 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-graduation-cap text-slate-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-primary mb-3">Đào tạo sử dụng</h3>
-                            <p class="text-text-secondary text-sm leading-relaxed">
-                                Đội ngũ kỹ thuật sẽ đào tạo chi tiết cho cán bộ, nhân viên sử dụng hệ thống
-                            </p>
-                        </div>
-                    </div>
-                    
-                    Step 4
-                    <div class="text-center group" data-aos="fade-up" data-aos-delay="400">
-                        <div class="relative mb-6">
-                            <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-all duration-300 shadow-lg">
-                                <span class="text-2xl font-bold text-white">4</span>
-                            </div>
-                            <div class="absolute inset-0 bg-primary/20 rounded-full animate-ping group-hover:animate-none"></div>
-                        </div>
-                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50">
-                            <div class="w-12 h-12 bg-gradient-to-r from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-headset text-primary text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-primary mb-3">Vận hành & Hỗ trợ</h3>
-                            <p class="text-text-secondary text-sm leading-relaxed">
-                                Hỗ trợ kỹ thuật 24/7, bảo trì hệ thống và nâng cấp tính năng liên tục
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>  -->
-
     <!-- Benefits & Implementation Section -->
     <section class="py-20 bg-white relative overflow-hidden" id="benefits">
         <div class="container mx-auto px-6">
@@ -1296,41 +1027,6 @@
                 </p>
             </div>
             
-            <!-- Awards Grid
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <div class="group tilt-card bg-gradient-to-br from-accent to-amber-600 rounded-3xl p-8 text-white text-center shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="flip-left" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-trophy text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Bằng khen sáng tạo</h3>
-                    <p class="opacity-90">CUSC-ISO (2018)</p>
-                </div>
-                
-                <div class="group tilt-card bg-gradient-to-br from-primary to-secondary rounded-3xl p-8 text-white text-center shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="flip-left" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-medal text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Giải thưởng chuyển đổi số</h3>
-                    <p class="opacity-90">Việt Nam 2019</p>
-                </div>
-                
-                <div class="group tilt-card bg-gradient-to-br from-slate-500 to-slate-600 rounded-3xl p-8 text-white text-center shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="flip-left" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-star text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Giải thưởng Sao Khuê</h3>
-                    <p class="opacity-90">2018</p>
-                </div>
-                
-                <div class="group tilt-card bg-gradient-to-br from-primary to-secondary rounded-3xl p-8 text-white text-center shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="flip-left" data-aos-delay="400">
-                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-building text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">TOP 10 Doanh nghiệp</h3>
-                    <p class="opacity-90">CNTT Việt Nam 2022</p>
-                </div>
-            </div> -->
-
             <!-- Awards Timeline -->
             <div class="space-y-20">
                 <!-- Award 2022 -->
@@ -1679,7 +1375,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Counter với animation giống stats trong page -->
+                <!-- Counters -->
                 <div class="lg:col-span-3 flex flex-col items-start">
                     <h5 class="text-lg font-semibold mb-6 text-blue-100">Lượt truy cập</h5>
                     <div class="space-y-3 w-[280px] h-[140px] flex flex-col justify-center">
