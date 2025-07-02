@@ -23,6 +23,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
+    <style>
+    .contact-link {
+      transition: color 0.2s;
+    }
+    .contact-link:hover {
+      color: #ff6b35; /* blue-600 */
+      text-decoration: underline;
+    }
+    </style>
 </head>
 <body class="font-sans text-text-primary overflow-x-hidden">
     <!-- Header -->
@@ -32,7 +41,7 @@
                 <!-- Logo -->
                 <div class="flex items-center" data-aos="fade-right">
                     <div class="bg-white/90 rounded-lg p-0 inline-flex">
-                        <img src="image/logocusc1.png" alt="CUSC Logo" class="w-40 h-20 object-contain">
+                        <img src="image/logochuan.jpg" alt="CUSC Logo" class="w-40 h-20 object-contain">
                     </div>
                 </div>          
                 <!-- Desktop Menu -->
@@ -137,7 +146,7 @@
                     
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="800">
-                        <a href="#contact" class="magnetic-button bg-gradient-to-r from-accent to-amber-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-accent/40 glow-effect transform hover:scale-105 transition-all duration-300">
+                        <a href="#contactModal" class="magnetic-button bg-gradient-to-r from-accent to-amber-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-accent/40 glow-effect transform hover:scale-105 transition-all duration-300">
                             <i class="fas fa-rocket mr-2"></i>
                             Liên hệ ngay
                         </a>
@@ -317,55 +326,6 @@
                             <div class="bg-white rounded-2xl p-0 flex items-center justify-center aspect-video overflow-hidden w-full">
                                 <img src="image/dr169.jpg" alt="Dashboard ISO 9001:2015" class="w-full h-full object-cover rounded-2xl">
                             </div>
-                            <!-- Dashboard Content
-                            <div class="bg-white rounded-2xl p-6 space-y-4">
-                                 Header 
-                                <div class="flex items-center justify-between">
-                                    <h3 class="text-xl font-bold text-text-primary">Dashboard ISO 9001:2015</h3>
-                                    <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                                        <span class="text-sm text-green-600 font-medium">Hoạt động</span>
-                                    </div>
-                                </div>
-                                
-                                Stats Cards 
-                                <div class="grid grid-cols-3 gap-4">
-                                    <div class="bg-gradient-to-r from-primary to-secondary rounded-xl p-4 text-white text-center">
-                                        <div class="text-2xl font-bold">95%</div>
-                                        <div class="text-xs opacity-90">Hoàn thành</div>
-                                    </div>
-                                    <div class="bg-gradient-to-r from-accent to-amber-600 rounded-xl p-4 text-white text-center">
-                                        <div class="text-2xl font-bold">24</div>
-                                        <div class="text-xs opacity-90">Quy trình</div>
-                                    </div>
-                                    <div class="bg-gradient-to-r from-slate-500 to-slate-600 rounded-xl p-4 text-white text-center">
-                                        <div class="text-2xl font-bold">156</div>
-                                        <div class="text-xs opacity-90">Tài liệu</div>
-                                    </div>
-                                </div>
-                                
-                                Progress Bars
-                                <div class="space-y-3">
-                                    <div>
-                                        <div class="flex justify-between text-sm mb-1">
-                                            <span class="text-text-secondary">Đánh giá nội bộ</span>
-                                            <span class="text-text-primary font-medium">85%</span>
-                                        </div>
-                                        <div class="w-full bg-gray-200 rounded-full h-2">
-                                            <div class="bg-gradient-to-r from-primary to-secondary h-2 rounded-full animate-pulse" style="width: 85%"></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="flex justify-between text-sm mb-1">
-                                            <span class="text-text-secondary">Kiểm soát tài liệu</span>
-                                            <span class="text-text-primary font-medium">92%</span>
-                                        </div>
-                                        <div class="w-full bg-gray-200 rounded-full h-2">
-                                            <div class="bg-gradient-to-r from-accent to-amber-600 h-2 rounded-full animate-pulse" style="width: 92%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                     
@@ -1105,7 +1065,7 @@
                     </div>
                     
                     <div class="order-2">
-                        <div class="relative group cursor-pointer" onclick="window.open('https://www.ctu.edu.vn/tin-tuc-su-kien/cusc-nhan-giai-thuong-chuyen-doi-so-2019.html')">
+                        <div class="relative group cursor-pointer" onclick="window.open('https://cusc.vn/cms')">
                             <img src="image/chungnhan.png" alt="Chuyển đổi số 2019" class="w-full h-64 lg:h-80 object-contain bg-white rounded-2xl shadow-xl border-4 border-blue-100 group-hover:border-blue-300 transition-all duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end justify-center pb-8">
                                 <div class="text-white text-center">
@@ -1176,74 +1136,6 @@
                 </div>
             </div>
 
-            <!-- Deployment Stats -->
-            <div class="bg-gradient-to-br from-light-bg to-blue-50 rounded-3xl p-8 lg:p-12 shadow-lg" data-aos="fade-up">
-                <div class="text-center mb-12">
-                    <h3 class="text-3xl font-bold text-text-primary mb-4">Phạm vi triển khai toàn quốc</h3>
-                    <p class="text-xl text-text-secondary">897+ cơ quan tin tưởng trên 7 tỉnh/thành phố</p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="text-center group" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="w-24 h-24 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-all duration-300 shadow-lg">
-                            <span class="text-2xl font-bold text-white counter" data-target="130">0</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-text-primary mb-2">Cà Mau</h4>
-                        <p class="text-text-secondary">Cơ quan triển khai</p>
-                    </div>
-                    
-                    <div class="text-center group" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="w-24 h-24 bg-gradient-to-r from-accent to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-all duration-300 shadow-lg">
-                            <span class="text-2xl font-bold text-white counter" data-target="227">0</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-text-primary mb-2">Quảng Ninh</h4>
-                        <p class="text-text-secondary">Cơ quan triển khai</p>
-                    </div>
-                    
-                    <div class="text-center group" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="w-24 h-24 bg-gradient-to-r from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-all duration-300 shadow-lg">
-                            <span class="text-2xl font-bold text-white counter" data-target="208">0</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-text-primary mb-2">Quảng Bình</h4>
-                        <p class="text-text-secondary">Cơ quan triển khai</p>
-                    </div>
-                    
-                    <div class="text-center group" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="w-24 h-24 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-all duration-300 shadow-lg">
-                            <span class="text-2xl font-bold text-white counter" data-target="40">0</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-text-primary mb-2">Ninh Bình</h4>
-                        <p class="text-text-secondary">Cơ quan triển khai</p>
-                    </div>
-                    
-                    <div class="text-center group" data-aos="zoom-in" data-aos-delay="500">
-                        <div class="w-24 h-24 bg-gradient-to-r from-accent to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-all duration-300 shadow-lg">
-                            <span class="text-2xl font-bold text-white counter" data-target="133">0</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-text-primary mb-2">Trà Vinh</h4>
-                        <p class="text-text-secondary">Cơ quan triển khai</p>
-                    </div>
-                    
-                    <div class="text-center group" data-aos="zoom-in" data-aos-delay="600">
-                        <div class="w-24 h-24 bg-gradient-to-r from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-all duration-300 shadow-lg">
-                            <span class="text-2xl font-bold text-white counter" data-target="77">0</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-text-primary mb-2">Đắk Nông</h4>
-                        <p class="text-text-secondary">Cơ quan triển khai</p>
-                    </div>
-                    
-                    <div class="text-center group" data-aos="zoom-in" data-aos-delay="700">
-                        <div class="w-24 h-24 bg-gradient-to-r from-accent to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-all duration-300 shadow-lg">
-                            <span class="text-2xl font-bold text-white counter" data-target="42">0</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-text-primary mb-2">Sóc Trăng</h4>
-                        <p class="text-text-secondary">Cơ quan triển khai</p>
-                    </div>
-                    
-                    <!-- Empty div for better spacing on larger screens -->
-                    <div class="hidden lg:block"></div>
-                </div>
-            </div>
             <!-- Priority Product Badge -->
             <div class="text-center mt-12" data-aos="fade-up">
                 <div class="inline-flex items-center space-x-6 bg-gradient-to-r from-accent to-amber-600 text-white px-8 py-6 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-300">
@@ -1270,139 +1162,86 @@
 
     <!-- Footer -->
     <footer id="contact" class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden w-full pt-20 pb-6">
-        <!-- Background Pattern giống các section khác -->
+        <!-- Background Pattern và hiệu ứng giữ nguyên -->
         <div class="absolute inset-0 opacity-10">
             <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, #ffffff 2px, transparent 2px), radial-gradient(circle at 75% 75%, #f59e0b 2px, transparent 2px); background-size: 50px 50px;"></div>
         </div>
-        
-        <!-- Floating shapes giống hero section -->
         <div class="absolute inset-0 overflow-hidden">
             <div class="absolute top-20 left-10 w-16 h-16 bg-white/10 rounded-full animate-float"></div>
             <div class="absolute top-40 right-20 w-12 h-12 bg-accent/20 rounded-lg transform rotate-45 animate-pulse"></div>
             <div class="absolute bottom-40 left-1/4 w-8 h-8 bg-white/10 rounded-full animate-bounce-slow"></div>
         </div>
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 mb-8">
-                <!-- Logo & Info -->
-                <div class="lg:col-span-4 flex flex-col items-start">
-                    <!-- Logo với hover effect giống header -->
-                    <div class="relative group mb-8">
-                        <div class="w-40 h-20 bg-white rounded-2xl flex items-center justify-center transform hover:scale-105 transition-all duration-300 overflow-hidden border-2 border-white shadow-lg">
-                            <img src="image/logocusc.jpg" alt="CUSC Logo" class="w-36 h-18 object-contain rounded-xl">
-                        </div>
-                        <!-- Glow effect giống header -->
-                        <div class="absolute inset-0 bg-gradient-to-r from-accent/30 to-amber-600/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm -z-10"></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8 items-start">
+                <!-- Cột 1: Logo + Info -->
+                <div class="flex flex-col items-start justify-center w-full">
+                    <div class="w-36 h-24 bg-white rounded-2xl flex items-center justify-center mb-4 border-2 border-white shadow-lg">
+                        <img src="image/logochuan.jpg" alt="CUSC Logo" class="w-full h-full object-contain object-center rounded-xl">
                     </div>
-
-                    <p class="mb-6 text-blue-200 font-semibold text-lg">
-                        TRUNG TÂM CÔNG NGHỆ PHẦN MỀM<br>
-                        <span class="text-blue-400 font-normal">TRƯỜNG ĐẠI HỌC CẦN THƠ</span>
+                    <p class="mb-2 text-accent font-bold text-lg flex items-center">
+                        <i class="fa fa-building mr-2"></i> TRUNG TÂM CÔNG NGHỆ PHẦN MỀM
                     </p>
-                    
-                    <div class="space-y-4">
-                        <!-- Các thông tin liên hệ với icon màu giống theme -->
-                        <p class="flex items-center text-blue-100 text-base hover:text-white transition-colors duration-300">
-                            <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M12,2C15.31,2 18,4.66 18,7.95C18,12.41 12,19 12,19S6,12.41 6,7.95C6,4.66 8.69,2 12,2M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6Z"/></svg>
+                    <p class="mb-4 text-blue-400 font-normal text-base">TRƯỜNG ĐẠI HỌC CẦN THƠ</p>
+                    <div class="space-y-2 text-blue-100 text-base">
+                        <p class="flex items-center hover:text-white transition-colors duration-300">
+                            <i class="fa fa-map-marker-alt text-accent mr-3"></i>
                             01 Lý Tự Trọng, P.Thới Bình, Q.Ninh Kiều, TP.Cần Thơ
                         </p>
-                        <p class="flex items-center text-blue-100 text-base hover:text-white transition-colors duration-300">
-                            <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
-                            Điện thoại: (0292) 3731072 - Fax: (0292) 3731071
+                        <p class="flex items-center hover:text-white transition-colors duration-300">
+                            <i class="fa fa-phone-alt text-accent mr-3"></i>
+                            <a href="tel:02923731072">Điện thoại: (0292) 3731072 - Fax: (0292) 3731071</a>
                         </p>
-                        <p class="flex items-center text-blue-100 text-base hover:text-white transition-colors duration-300">
-                            <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/></svg>
-                            cusc@ctu.edu.vn
+                        <p class="flex items-center hover:text-white transition-colors duration-300">
+                            <i class="fa fa-envelope text-accent mr-3"></i>
+                            <a href="mailto:cusc@ctu.edu.vn">cusc@ctu.edu.vn</a>
                         </p>
                     </div>
                 </div>
-
-                <!-- Social với animation giống các button khác -->
-                <div class="lg:col-span-1 flex flex-col items-start">
-                    <h5 class="text-lg font-semibold mb-6 text-blue-100">Kết nối</h5>
-                    <div class="flex flex-row lg:flex-col gap-4 justify-center">
-                        <a href="https://www.facebook.com/cuscsoftware" class="magnetic-button hover:scale-110 transition-transform duration-300">
+                <!-- Cột 2: Kết nối mạng xã hội (căn giữa) -->
+                <div class="flex flex-col items-center justify-center w-full self-start mt-0">
+                    <h5 class="text-lg font-bold mb-6 text-accent flex items-center">
+                        <i class="fa fa-link mr-2"></i> Kết nối với chúng tôi
+                    </h5>
+                    <div class="flex flex-row gap-6 justify-center w-full">
+                        <a href="https://www.facebook.com/cuscsoftware" class="magnetic-button hover:scale-110 transition-transform duration-300 rounded-full bg-slate-800/80 p-3">
                             <img src="image/iconFB.svg" alt="Facebook" class="w-11 h-11">
                         </a>
-                        <a href="https://www.youtube.com/channel/UCND2Duw4gdaKPaWSiXLGu_Q" class="magnetic-button hover:scale-110 transition-transform duration-300">
+                        <a href="https://www.youtube.com/channel/UCND2Duw4gdaKPaWSiXLGu_Q" class="magnetic-button hover:scale-110 transition-transform duration-300 rounded-full bg-slate-800/80 p-3">
                             <img src="image/iconYTB.svg" alt="YouTube" class="w-11 h-11">
                         </a>
-                        <a href="https://zalo.me/4610637127320083887" class="magnetic-button hover:scale-110 transition-transform duration-300">
+                        <a href="https://zalo.me/4610637127320083887" class="magnetic-button hover:scale-110 transition-transform duration-300 rounded-full bg-slate-800/80 p-3">
                             <img src="image/iconZalo.svg.png" alt="Zalo" class="w-11 h-11">
                         </a>
                     </div>
                 </div>
-
-                <!-- Contact Cards với style giống các card trong page -->
-                <div class="lg:col-span-4 flex flex-col gap-4">
-                    <h5 class="text-lg font-semibold text-blue-100">Liên hệ tư vấn</h5>
-                    
-                    <!-- Card 1 với hover effect -->
-                    <div class="tilt-card bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 flex flex-row items-center gap-4 h-[160px]">
-                        <div class="flex-1">
-                            <h6 class="font-semibold text-white text-base mb-2">Mr. Nguyễn Thanh Nhàn</h6>
-                            <p class="text-blue-200 text-sm mb-3">Chuyên viên tư vấn phần mềm 1</p>
-                            <div class="text-blue-100 text-sm space-y-2">
-                                <a href="tel:0939511445" class="flex items-center hover:text-accent transition-colors duration-300">
-                                    <svg class="w-4 h-4 mr-2 text-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
-                                    0939 511 445
-                                </a>
-                                <a href="mailto:nhannguyen@ctu.edu.vn" class="flex items-center hover:text-accent transition-colors duration-300">
-                                    <svg class="w-4 h-4 mr-2 text-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/></svg>
-                                    nhannguyen@ctu.edu.vn
-                                </a>
+                <!-- Cột 3: Lượt truy cập - căn giữa, tiêu đề và box thẳng hàng -->
+                <div class="flex flex-col items-center justify-center w-full self-start mt-0">
+                    <div class="w-[280px]">
+                        <h5 class="text-lg font-bold text-accent flex items-center mb-2 text-left">
+                            <i class="fa fa-signal mr-2"></i> Lượt truy cập
+                        </h5>
+                        <div class="bg-slate-800/80 rounded-xl px-6 py-6 shadow border border-white/20">
+                            <div class="flex items-center mb-3">
+                                <i class="fa fa-users text-accent mr-3"></i>
+                                <span class="flex-1">Đang online:</span>
+                                <span class="font-bold text-white counter" data-target="15">0</span>
                             </div>
-                        </div>
-                        <div class="ml-2">
-                            <img src="image/qrzalo.jpg" alt="QR Code" class="w-20 h-20 rounded-lg border border-gray-200 shadow hover:scale-105 transition-transform duration-300">
-                        </div>
-                    </div>
-                    
-                    <!-- Card 2 tương tự -->
-                    <div class="tilt-card bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 flex flex-row items-center gap-4 h-[160px]">
-                        <div class="flex-1">
-                            <h6 class="font-semibold text-white text-base mb-2">Mr. Lê Vũ Luân</h6>
-                            <p class="text-blue-200 text-sm mb-3">Chuyên viên tư vấn phần mềm 2</p>
-                            <div class="text-blue-100 text-sm space-y-2">
-                                <a href="tel:0366183317" class="flex items-center hover:text-accent transition-colors duration-300">
-                                    <svg class="w-4 h-4 mr-2 text-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
-                                    0366 183 317
-                                </a>
-                                <a href="mailto:lvluan@ctu.edu.vn" class="flex items-center hover:text-accent transition-colors duration-300">
-                                    <svg class="w-4 h-4 mr-2 text-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/></svg>
-                                    lvluan@ctu.edu.vn
-                                </a>
+                            <div class="flex items-center mb-3">
+                                <i class="fa fa-eye text-accent mr-3"></i>
+                                <span class="flex-1">Hôm nay:</span>
+                                <span class="font-bold text-white counter" data-target="234">0</span>
                             </div>
-                        </div>
-                        <div class="ml-2">
-                            <img src="image/qrzalo.jpg" alt="QR Code" class="w-20 h-20 rounded-lg border border-gray-200 shadow hover:scale-105 transition-transform duration-300">
-                        </div>
-                    </div>
-                </div>
-                <!-- Counters -->
-                <div class="lg:col-span-3 flex flex-col items-start">
-                    <h5 class="text-lg font-semibold mb-6 text-blue-100">Lượt truy cập</h5>
-                    <div class="space-y-3 w-[280px] h-[140px] flex flex-col justify-center">
-                        <div class="flex items-center text-blue-100 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2.5 shadow hover:bg-white/20 transition-all duration-300 border border-white/20">
-                            <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                            <span class="text-base ml-3 flex-1">Đang online:</span>
-                            <span class="font-bold text-base text-accent counter" data-target="15">0</span>
-                        </div>
-                        <div class="flex items-center text-blue-100 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2.5 shadow hover:bg-white/20 transition-all duration-300 border border-white/20">
-                            <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-                            <span class="text-base ml-3 flex-1">Hôm nay:</span>
-                            <span class="font-bold text-base text-accent counter" data-target="234">0</span>
-                        </div>
-                        <div class="flex items-center text-blue-100 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2.5 shadow hover:bg-white/20 transition-all duration-300 border border-white/20">
-                            <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-                            <span class="text-base ml-3 flex-1">Tổng truy cập:</span>
-                            <span class="font-bold text-base text-accent counter" data-target="1234">0</span>
+                            <div class="flex items-center">
+                                <i class="fa fa-chart-line text-accent mr-3"></i>
+                                <span class="flex-1">Tổng truy cập:</span>
+                                <span class="font-bold text-white counter" data-target="1234">0</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Copyright -->
-            <div class="w-full py-4 border-t border-blue-800/50">
+            <div class="w-full py-4 border-t border-blue-800/50 mt-4">
                 <p class="text-blue-200 text-sm mb-0 text-center">
                     © 2024 CUSC - Trung tâm Công nghệ Phần mềm Đại học Cần Thơ. All rights reserved.
                 </p>
@@ -1756,6 +1595,67 @@
         });
     </script>
     <script src="script.js"></script>
+
+    <!-- Modal Liên hệ tư vấn -->
+    <div id="contactModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 hidden">
+      <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-6 relative animate-fade-in">
+        <!-- Nút đóng -->
+        <button id="closeContactModal" class="absolute top-4 right-4 text-2xl text-gray-400 hover:text-blue-600 focus:outline-none">
+          <i class="fa fa-times"></i>
+        </button>
+        <h2 class="text-2xl font-bold text-blue-700 mb-6">Liên hệ tư vấn</h2>
+        <div class="space-y-6">
+          <!-- Card 1 -->
+          <div class="flex items-center bg-blue-50 rounded-xl p-4 shadow-sm">
+            <img src="image/chandung.jpg" alt="Avatar" class="w-20 h-20 rounded-full border-2 border-white shadow mr-4">
+            <div class="flex-1">
+              <div class="font-bold text-blue-700 text-lg">Mr. Nguyễn Thanh Nhàn</div>
+              <div class="text-gray-600 text-sm mb-2">Chuyên viên tư vấn phần mềm 1</div>
+              <div class="flex items-center text-gray-700 mb-1"><i class="fa fa-phone-alt mr-2"></i> <a href="tel:0939511445" class="contact-link"> 0939 511 445</a></div>
+              <div class="flex items-center text-gray-700"><i class="fa fa-envelope mr-2"></i> <a href="mailto:nhannguyen@ctu.edu.vn" class="contact-link"> nhannguyen@ctu.edu.vn</a>n</div>
+            </div>
+            <div class="flex flex-col items-center ml-4">
+              <img src="image/qrzalo.jpg" alt="QR Zalo" class="w-24 h-24 rounded bg-white border mb-1">
+              <span class="text-xs text-gray-500">Quét để liên hệ</span>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="flex items-center bg-blue-50 rounded-xl p-4 shadow-sm">
+            <img src="image/chandung.jpg" alt="Avatar" class="w-20 h-20 rounded-full border-2 border-white shadow mr-4">
+            <div class="flex-1">
+              <div class="font-bold text-blue-700 text-lg">Mr. Lê Vũ Luân</div>
+              <div class="text-gray-600 text-sm mb-2">Chuyên viên tư vấn phần mềm 2</div>
+              <div class="flex items-center text-gray-700 mb-1"><i class="fa fa-phone-alt mr-2"></i><a href="tel:0366183317" class="contact-link"> 0366 183 317</a></div>
+              <div class="flex items-center text-gray-700"><i class="fa fa-envelope mr-2"></i> <a href="mailto:nhannguyen@ctu.edu.vn" class="contact-link"> lvluan@ctu.edu.vn</a></div>
+            </div>
+            <div class="flex flex-col items-center ml-4">
+              <img src="image/qrzalo.jpg" alt="QR Zalo" class="w-24 h-24 rounded bg-white border mb-1">
+              <span class="text-xs text-gray-500">Quét để liên hệ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    // Modal open/close logic
+    const contactModal = document.getElementById('contactModal');
+    const closeContactBtn = document.getElementById('closeContactModal');
+    // Lắng nghe tất cả nút mở modal (href='#contactModal')
+    document.querySelectorAll('a[href="#contactModal"], button[data-modal="contactModal"]').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        contactModal.classList.remove('hidden');
+      });
+    });
+    function closeContactModal() {
+      contactModal.classList.add('hidden');
+    }
+    if(closeContactBtn) closeContactBtn.addEventListener('click', closeContactModal);
+    contactModal.addEventListener('mousedown', function(e) {
+      if(e.target === contactModal) closeContactModal();
+    });
+    </script>
 </body>
 </html>
 
