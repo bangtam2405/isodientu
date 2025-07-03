@@ -247,6 +247,20 @@
             width: 2.8rem !important;
             height: 1.6rem !important;
         }
+        .hero-bg h1 {
+            font-size: 2rem !important;
+            line-height: 1.2 !important;
+        }
+        .hero-bg h1 .typing-effect {
+            font-size: 1.3rem !important;
+        }
+        .hero-bg h2 {
+            font-size: 1.2rem !important;
+            line-height: 1.3 !important;
+        }
+        #home.hero-bg {
+            padding-top: 100px !important;
+        }
     }
 
     @media (max-width: 480px) {
@@ -675,4 +689,62 @@
   color: #ff6b35;
 }
 
+.text-2xl {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+}
+@media (min-width: 1024px) {
+    .lg\:text-3xl {
+        font-size: 1.875rem !important;
+        line-height: 2.25rem !important;
+    }
+}
 
+.contact-link {
+    transition: color 0.2s;
+  }
+  .contact-link:hover {
+    color: #ff6b35; /* blue-600 */
+    text-decoration: underline;
+  }
+
+@media (max-width: 640px) {
+  #contactModal .max-w-2xl {
+    max-width: 98vw !important;
+    width: 98vw !important;
+    padding: 0.5rem !important;
+  }
+  #contactModal .p-6 {
+    padding: 0.5rem !important;
+  }
+  #contactModal .w-20, #contactModal .h-20 {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+  }
+  #contactModal .w-24, #contactModal .h-24 {
+    width: 4.5rem !important;
+    height: 4.5rem !important;
+  }
+  #contactModal .ml-4 {
+    margin-left: 0.5rem !important;
+  }
+  #contactModal .flex-1, #contactModal .space-y-6 {
+    text-align: center !important;
+  }
+  #contactModal h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  #contactModal .text-lg {
+    font-size: 1rem !important;
+  }
+  #contactModal .text-sm {
+    font-size: 0.9rem !important;
+  }
+  #closeContactModal {
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+    font-size: 1.5rem !important;
+    z-index: 10;
+  }
+}

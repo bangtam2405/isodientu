@@ -23,15 +23,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
-    <style>
-    .contact-link {
-      transition: color 0.2s;
-    }
-    .contact-link:hover {
-      color: #ff6b35; /* blue-600 */
-      text-decoration: underline;
-    }
-    </style>
 </head>
 <body class="font-sans text-text-primary overflow-x-hidden">
     <!-- Header -->
@@ -90,7 +81,7 @@
                 <a href="#proof" class="hover:text-accent transition-colors py-3 px-4 rounded-lg hover:bg-white/10 text-lg flex items-center">
                     <i class="fas fa-award mr-3 w-5"></i>Thành tích
                 </a>
-                <a href="#contact" class="bg-gradient-to-r from-accent to-amber-600 text-white px-6 py-3 rounded-lg text-center font-semibold mt-4 hover:shadow-lg transition-all duration-300 text-lg flex items-center justify-center">
+                <a href="#contactModal" class="bg-gradient-to-r from-accent to-amber-600 text-white px-6 py-3 rounded-lg text-center font-semibold mt-4 hover:shadow-lg transition-all duration-300 text-lg flex items-center justify-center">
                     <i class="fas fa-phone mr-2"></i>Liên hệ
                 </a>
             </div>
@@ -1161,7 +1152,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden w-full pt-20 pb-6">
+    <footer id="contact" class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden w-full pt-12 sm:pt-16 lg:pt-20 pb-6">
         <!-- Background Pattern và hiệu ứng giữ nguyên -->
         <div class="absolute inset-0 opacity-10">
             <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, #ffffff 2px, transparent 2px), radial-gradient(circle at 75% 75%, #f59e0b 2px, transparent 2px); background-size: 50px 50px;"></div>
@@ -1172,69 +1163,69 @@
             <div class="absolute bottom-40 left-1/4 w-8 h-8 bg-white/10 rounded-full animate-bounce-slow"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8 items-start">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8 items-start">
                 <!-- Cột 1: Logo + Info -->
                 <div class="flex flex-col items-start justify-center w-full">
-                    <div class="w-36 h-24 bg-white rounded-2xl flex items-center justify-center mb-4 border-2 border-white shadow-lg">
+                    <div class="w-28 h-20 sm:w-36 sm:h-24 bg-white rounded-2xl flex items-center justify-center mb-4 border-2 border-white shadow-lg">
                         <img src="image/logochuan.jpg" alt="CUSC Logo" class="w-full h-full object-contain object-center rounded-xl">
                     </div>
-                    <p class="mb-2 text-accent font-bold text-lg flex items-center">
+                    <p class="mb-2 text-accent font-bold text-base sm:text-lg flex items-center">
                         <i class="fa fa-building mr-2"></i> TRUNG TÂM CÔNG NGHỆ PHẦN MỀM
                     </p>
-                    <p class="mb-4 text-blue-400 font-normal text-base">TRƯỜNG ĐẠI HỌC CẦN THƠ</p>
-                    <div class="space-y-2 text-blue-100 text-base">
-                        <p class="flex items-center hover:text-white transition-colors duration-300">
-                            <i class="fa fa-map-marker-alt text-accent mr-3"></i>
-                            01 Lý Tự Trọng, Phường Ninh Kiều, Thành Phố Cần Thơ
+                    <p class="mb-4 text-blue-400 font-normal text-sm sm:text-base">TRƯỜNG ĐẠI HỌC CẦN THƠ</p>
+                    <div class="space-y-2 text-blue-100 text-sm sm:text-base">
+                        <p class="flex items-start sm:items-center hover:text-white transition-colors duration-300">
+                            <i class="fa fa-map-marker-alt text-accent mr-3 mt-1 sm:mt-0 flex-shrink-0"></i>
+                            <span class="leading-relaxed">01 Lý Tự Trọng, Phường Ninh Kiều, Thành Phố Cần Thơ</span>
                         </p>
                         <p class="flex items-center hover:text-white transition-colors duration-300">
-                            <i class="fa fa-phone-alt text-accent mr-3"></i>
-                            <a href="tel:02923731072" class="contact-link">Điện thoại: (0292) 3731072 - Fax: (0292) 3731071</a>
+                            <i class="fa fa-phone-alt text-accent mr-3 flex-shrink-0"></i>
+                            <a href="tel:02923731072" class="contact-link text-sm sm:text-base">Điện thoại: (0292) 3731072 - Fax: (0292) 3731071</a>
                         </p>
                         <p class="flex items-center hover:text-white transition-colors duration-300">
-                            <i class="fa fa-envelope text-accent mr-3"></i>
-                            <a href="mailto:cusc@ctu.edu.vn" class="contact-link">cusc@ctu.edu.vn</a>
+                            <i class="fa fa-envelope text-accent mr-3 flex-shrink-0"></i>
+                            <a href="mailto:cusc@ctu.edu.vn" class="contact-link text-sm sm:text-base">cusc@ctu.edu.vn</a>
                         </p>
                     </div>
                 </div>
                 <!-- Cột 2: Kết nối mạng xã hội (căn giữa) -->
-                <div class="flex flex-col items-center justify-center w-full self-start mt-0">
-                    <h5 class="text-lg font-bold mb-6 text-accent flex items-center">
+                <div class="flex flex-col items-center justify-center w-full self-start mt-8 sm:mt-0">
+                    <h5 class="text-base sm:text-lg font-bold mb-4 sm:mb-6 text-accent flex items-center">
                         <i class="fa fa-link mr-2"></i> Kết nối với chúng tôi
                     </h5>
-                    <div class="flex flex-row gap-6 justify-center w-full">
-                        <a href="https://www.facebook.com/cuscsoftware" class="magnetic-button hover:scale-110 transition-transform duration-300 rounded-full bg-slate-800/80 p-3">
-                            <img src="image/iconFB.svg" alt="Facebook" class="w-11 h-11">
+                    <div class="flex flex-row gap-4 sm:gap-6 justify-center w-full">
+                        <a href="https://www.facebook.com/cuscsoftware" class="magnetic-button hover:scale-110 transition-transform duration-300 rounded-full bg-slate-800/80 p-2 sm:p-3">
+                            <img src="image/iconFB.svg" alt="Facebook" class="w-9 h-9 sm:w-11 sm:h-11">
                         </a>
-                        <a href="https://www.youtube.com/channel/UCND2Duw4gdaKPaWSiXLGu_Q" class="magnetic-button hover:scale-110 transition-transform duration-300 rounded-full bg-slate-800/80 p-3">
-                            <img src="image/iconYTB.svg" alt="YouTube" class="w-11 h-11">
+                        <a href="https://www.youtube.com/channel/UCND2Duw4gdaKPaWSiXLGu_Q" class="magnetic-button hover:scale-110 transition-transform duration-300 rounded-full bg-slate-800/80 p-2 sm:p-3">
+                            <img src="image/iconYTB.svg" alt="YouTube" class="w-9 h-9 sm:w-11 sm:h-11">
                         </a>
-                        <a href="https://zalo.me/4610637127320083887" class="magnetic-button hover:scale-110 transition-transform duration-300 rounded-full bg-slate-800/80 p-3">
-                            <img src="image/iconZalo.svg.png" alt="Zalo" class="w-11 h-11">
+                        <a href="https://zalo.me/4610637127320083887" class="magnetic-button hover:scale-110 transition-transform duration-300 rounded-full bg-slate-800/80 p-2 sm:p-3">
+                            <img src="image/iconZalo.svg.png" alt="Zalo" class="w-9 h-9 sm:w-11 sm:h-11">
                         </a>
                     </div>
                 </div>
                 <!-- Cột 3: Lượt truy cập - căn giữa, tiêu đề và box thẳng hàng -->
-                <div class="flex flex-col items-center justify-center w-full self-start mt-0">
-                    <div class="w-[280px]">
-                        <h5 class="text-lg font-bold text-accent flex items-center mb-2 text-left">
+                <div class="flex flex-col items-center justify-center w-full self-start mt-8 sm:mt-0">
+                    <div class="w-full max-w-[280px]">
+                        <h5 class="text-base sm:text-lg font-bold text-accent flex items-center mb-2 text-center sm:text-left">
                             <i class="fa fa-signal mr-2"></i> Lượt truy cập
                         </h5>
-                        <div class="bg-slate-800/80 rounded-xl px-6 py-6 shadow border border-white/20">
+                        <div class="bg-slate-800/80 rounded-xl px-4 sm:px-6 py-4 sm:py-6 shadow border border-white/20">
                             <div class="flex items-center mb-3 footer-hoverable">
-                                <i class="fa fa-users text-accent mr-3"></i>
-                                <span class="flex-1">Đang online:</span>
-                                <span class="font-bold text-white counter" data-target="15">0</span>
+                                <i class="fa fa-users text-accent mr-3 flex-shrink-0"></i>
+                                <span class="flex-1 text-sm sm:text-base">Đang online:</span>
+                                <span class="font-bold text-white counter text-sm sm:text-base" data-target="15">0</span>
                             </div>
                             <div class="flex items-center mb-3 footer-hoverable">
-                                <i class="fa fa-eye text-accent mr-3"></i>
-                                <span class="flex-1">Hôm nay:</span>
-                                <span class="font-bold text-white counter" data-target="234">0</span>
+                                <i class="fa fa-eye text-accent mr-3 flex-shrink-0"></i>
+                                <span class="flex-1 text-sm sm:text-base">Hôm nay:</span>
+                                <span class="font-bold text-white counter text-sm sm:text-base" data-target="234">0</span>
                             </div>
                             <div class="flex items-center footer-hoverable">
-                                <i class="fa fa-chart-line text-accent mr-3"></i>
-                                <span class="flex-1">Tổng truy cập:</span>
-                                <span class="font-bold text-white counter" data-target="1234">0</span>
+                                <i class="fa fa-chart-line text-accent mr-3 flex-shrink-0"></i>
+                                <span class="flex-1 text-sm sm:text-base">Tổng truy cập:</span>
+                                <span class="font-bold text-white counter text-sm sm:text-base" data-target="1234">0</span>
                             </div>
                         </div>
                     </div>
@@ -1242,7 +1233,7 @@
             </div>
             <!-- Copyright -->
             <div class="w-full py-4 border-t border-blue-800/50 mt-4">
-                <p class="text-blue-200 text-sm mb-0 text-center">
+                <p class="text-blue-200 text-xs sm:text-sm mb-0 text-center px-4">
                     © 2024 CUSC - Trung tâm Công nghệ Phần mềm Đại học Cần Thơ. All rights reserved.
                 </p>
             </div>
@@ -1612,7 +1603,7 @@
               <div class="font-bold text-blue-700 text-lg">Mr. Nguyễn Thanh Nhàn</div>
               <div class="text-gray-600 text-sm mb-2">Chuyên viên tư vấn phần mềm 1</div>
               <div class="flex items-center text-gray-700 mb-1"><i class="fa fa-phone-alt mr-2"></i> <a href="tel:0939511445" class="contact-link"> 0939 511 445</a></div>
-              <div class="flex items-center text-gray-700"><i class="fa fa-envelope mr-2"></i> <a href="mailto:nhannguyen@ctu.edu.vn" class="contact-link"> nhannguyen@ctu.edu.vn</a>n</div>
+              <div class="flex items-center text-gray-700"><i class="fa fa-envelope mr-2"></i> <a href="mailto:nhannguyen@ctu.edu.vn" class="contact-link"> nhannguyen@ctu.edu.vn</a></div>
             </div>
             <div class="flex flex-col items-center ml-4">
               <img src="image/qrzalo.jpg" alt="QR Zalo" class="w-24 h-24 rounded bg-white border mb-1">
