@@ -654,4 +654,25 @@
     }
 }
 
+.contact-link {
+  transition: color 0.2s, text-decoration 0.2s;
+}
+.contact-link:hover {
+  color: #ff6b35;
+  text-decoration: none;
+}
+.footer-hoverable {
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.footer-hoverable:hover {
+  background: rgba(255,255,255,0.08);
+  color: #ff6b35;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+}
+.footer-hoverable:hover .counter {
+  color: #ff6b35;
+}
+
 
